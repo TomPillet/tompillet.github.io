@@ -39,8 +39,11 @@ const App = () => {
         <span className="navbar-neon" style={{'opacity': neonOpacity+'%'}}></span>
       </header>
 
-      <div className='photo-container'>
-        <img id="photoCV" src={photoCV} alt="" />
+      <div className='content'>
+        <div className='photo-container'>
+          <img id="photoCV" src={photoCV} alt="" />
+          <p id="photoPresentation">Salut, moi c'est <span>Tom</span></p>
+        </div>
       </div>
     </div>
   );

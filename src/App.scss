@@ -1,5 +1,6 @@
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+@keyframes slideIn {
+  from { margin-left: -100%; }
+  to { margin-left: 0%; }
 }
 
 * {
@@ -11,6 +12,18 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--main-content-color);
 }
 
+body {
+  background-color: var(--main-bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 
@@ -19,12 +32,9 @@ a {
   }
 }
 
-body {
-  background-color: var(--main-bg-color);
-}
-
-ol, ul, li {
-  list-style: none;
+.content {
+  animation-duration: 1s;
+  animation-name: slideIn;
 }
 
 .navbar {
@@ -79,26 +89,43 @@ ol, ul, li {
 }
 
 .photo-container {
-  height: 160px;
-  width: 160px;
+  height: 200px;
+  width: 200px;
   margin: auto;
   padding: 40px 0px;
 
-  &:after {
-    content: "Salut, moi c'est Tom.";
+  & #photoPresentation {
     display: block;
     margin-top: 8px;
     text-align: center;
     font-weight: 400;
+    transition: all 1s;
+
+    & span {
+      font-weight: bold;
+
+      &:after {
+        content: '';
+        position: relative;
+        left: 69%;
+        display: block;
+        height: 1px;
+        width: 0px;
+        background-color: var(--main-content-color);
+        transition: all .4s;
+      }
+    }
   }
 }
 #photoCV {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: left top;
+  // border: 4px solid white;
   border-radius: 100%;
-  box-shadow: black 4px 2px 4px;
+  box-sizing: border-box;
+  box-shadow: black 0px 0px 4px;
   filter: grayscale(90%) contrast(100%);
   transform: scale(90%);
   transition: all .8s;
@@ -107,5 +134,10 @@ ol, ul, li {
     transform: scale(100%);
     filter: grayscale(10%);
     transition: all .8s;
+  }
+
+  &:hover + #photoPresentation span:after {
+    width: 36px;
+    transition: all .4s;
   }
 }
