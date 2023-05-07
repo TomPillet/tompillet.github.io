@@ -3,19 +3,19 @@ import './App.scss';
 
 const App = () => {
   const [neonOpacity, setNeonOpacity] = useState(100);
-  let randIntervalDelay = (neonOpacity != 100) ? 80 : Math.floor(Math.random() * (1000 - 200) + 200);
+  // let randIntervalDelay = (neonOpacity != 100) ? 80 : Math.floor(Math.random() * (1000 - 200) + 200);
 
-  let randTrueOrFalse = () => {
-    return (Math.floor(Math.random() * (3 - 1) + 1) % 2) === 0;
-  }
+  // let randTrueOrFalse = () => {
+  //   return (Math.floor(Math.random() * (3 - 1) + 1) % 2) === 0;
+  // }
 
-  useEffect(() => {
-    const neonInterval = setInterval(() => {
-      setNeonOpacity((randTrueOrFalse()) ? 100 : (Math.random() * neonOpacity));
-    }, randIntervalDelay);
+  // useEffect(() => {
+  //   const neonInterval = setInterval(() => {
+  //     setNeonOpacity((randTrueOrFalse()) ? 100 : (Math.random() * neonOpacity));
+  //   }, randIntervalDelay);
     
-    return () => clearInterval(neonInterval);
-  })
+  //   return () => clearInterval(neonInterval);
+  // })  
 
   return (
     <div className="App">
