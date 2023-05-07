@@ -28,12 +28,26 @@ ol, ul, li {
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 32px 0px;
-  margin: 0px 12vw;
+  margin: 0px 16vw;
   color: var(--main-navbar-color) !important;
-  border-bottom: var(--main-navbar-color) 1px solid;
+}
+.navbar-neon {
+  position: absolute;
+  height: 2px;
+  width: 72vw;
+  top: 80px;
+  left: 14vw;
+
+  box-shadow:
+    0 0 8px #fff,
+    inset 0 0 8px #fff,
+    0 0 16px #c6e2ff,
+    inset 0 0 16px #c6e2ff,
+    0 0 32px #c6e2ff,
+    inset 0 0 32px #c6e2ff; 
 }
 
 .title {
