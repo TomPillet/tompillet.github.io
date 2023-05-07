@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
 
+import photoCV from './medias/photocv_profil.jpg';
+
 const App = () => {
   const [neonOpacity, setNeonOpacity] = useState(100);
   // let randIntervalDelay = (neonOpacity != 100) ? 80 : Math.floor(Math.random() * (1000 - 200) + 200);
@@ -36,6 +38,10 @@ const App = () => {
 
         <span className="navbar-neon" style={{'opacity': neonOpacity+'%'}}></span>
       </header>
+
+      <div className='photo-container'>
+        <img id="photoCV" src={photoCV} alt="" />
+      </div>
     </div>
   );
 }

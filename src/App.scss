@@ -5,12 +5,14 @@ h1, h2, h3, h4, h5, h6 {
 * {
   --main-bg-color: #161616;
   --main-content-color: #f1f1f1;
+  --second-content-color: #e4e4e4;
   --main-navbar-color: #d6d6d6;
+
+  color: var(--main-content-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--main-navbar-color);
 
   &:hover {
     border-bottom: var(--main-navbar-color) 1px solid;
@@ -52,7 +54,7 @@ ol, ul, li {
 
 .title {
   font-size: 1.1em;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .links-list {
@@ -69,5 +71,41 @@ ol, ul, li {
   &:not(:last-child):after {
     content: '/';
     margin-left: 12px;
+  }
+
+  & a {
+    color: var(--main-navbar-color);
+  }
+}
+
+.photo-container {
+  height: 160px;
+  width: 160px;
+  margin: auto;
+  padding: 40px 0px;
+
+  &:after {
+    content: "Salut, moi c'est Tom.";
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+#photoCV {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 100%;
+  box-shadow: black 4px 2px 4px;
+  filter: grayscale(90%) contrast(100%);
+  transform: scale(90%);
+  transition: all .8s;
+
+  &:hover {
+    transform: scale(100%);
+    filter: grayscale(10%);
+    transition: all .8s;
   }
 }
