@@ -5,6 +5,7 @@
 
 * {
   --main-bg-color: #161616;
+  --main-border-color: #323232;
   --main-content-color: #f1f1f1;
   --second-content-color: #e4e4e4;
   --main-navbar-color: #d6d6d6;
@@ -32,9 +33,17 @@ a {
   }
 }
 
+button {
+  padding: 12px 24px;
+  background-color: var(--main-bg-color);
+  border: solid 1px var(--main-border-color);
+  border-radius: 20px;
+}
+
 .content {
   animation-duration: 1s;
   animation-name: slideIn;
+  margin-top: 24px;
 }
 
 .navbar {
@@ -142,10 +151,24 @@ a {
   }
 }
 
+.presentation-wrapper {
+  margin: auto;
+  width: 80vw;
+
+  & .button {
+    display: block;
+    margin: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 .presentation-keywords {
   position: relative;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2.8em;
   margin: auto;
   padding: 32px 0px;
   width: 360px;

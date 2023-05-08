@@ -51,6 +51,8 @@ const App = () => {
               Développeur,<br/> créatif,<br/> ambitieux.
             </p>
           </div>
+
+          <button id="downloadCV" className='button action'>Télécharger le CV o</button>
         </div>
       </div>
     </div>
