@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import photoCV from './medias/photocv_profil.jpg';
 
@@ -52,7 +54,7 @@ const App = () => {
             </p>
           </div>
 
-          <button id="downloadCV" className='button action'>Télécharger le CV o</button>
+          <button id="downloadCV" className='button action'>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload} /></button>
         </div>
       </div>
     </div>

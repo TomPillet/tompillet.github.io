@@ -162,6 +162,10 @@ button {
     &:hover {
       cursor: pointer;
     }
+
+    & .icon {
+      margin-left: 4px;
+    }
   }
 }
 
