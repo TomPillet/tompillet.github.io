@@ -40,9 +40,17 @@ const App = () => {
       </header>
 
       <div className='content'>
-        <div className='photo-container'>
-          <img id="photoCV" src={photoCV} alt="" />
-          <p id="photoPresentation">Salut, moi c'est <span>Tom</span></p>
+        <div className="presentation-wrapper">
+          <div className='photo-container'>
+            <img id="photoCV" src={photoCV} alt="" />
+            <p id="photoHeadings">Salut, moi c'est <span>Tom</span></p>
+          </div>
+
+          <div className='presentation-container'>
+            <p className="presentation-keywords">
+              Développeur,<br/> créatif,<br/> ambitieux.
+            </p>
+          </div>
         </div>
       </div>
     </div>
