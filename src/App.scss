@@ -10,9 +10,10 @@
   --second-border-color: #444;
   --main-content-color: #f1f1f1;
   --second-content-color: #e4e4e4;
+  --third-content-color: #888888;
   --main-navbar-color: #d6d6d6;
 
-  color: var(--main-content-color);
+  // color: var(--main-content-color);
 }
 
 body {
@@ -35,11 +36,16 @@ a {
   }
 }
 
+p {
+  color: var(--main-content-color);
+}
+
 .button {
   padding: 12px 24px;
   background-color: var(--main-bg-color);
   border: solid 1px var(--main-border-color);
-  border-radius: 20px;
+  border-radius: 4px;
+  color: var(--third-content-color);
   width: fit-content;
 }
 
@@ -167,9 +173,13 @@ a {
   & .button {
     display: block;
     margin: auto;
+    background-color: var(--second-bg-color);
+    transition: all .3s;
 
     &:hover {
       cursor: pointer;
+      color: var(--main-content-color);
+      transition: all .3s;
     }
 
     & .icon {
@@ -183,7 +193,7 @@ a {
   font-weight: bold;
   font-size: 2.8em;
   margin: auto;
-  padding: 32px 0px;
+  padding: 8px 0px 24px 0px;
   width: 360px;
   text-align: center;
   color: var(--second-content-color);
