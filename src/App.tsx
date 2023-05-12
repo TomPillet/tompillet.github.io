@@ -21,7 +21,7 @@ const App = () => {
   //   return () => clearInterval(neonInterval);
   // })  
 
-  const onDownloadClick = () => {
+  const onDownloadCvClick = () => {
     fetch('CV_TomPILLET.pdf').then(response => {
       response.blob().then(blob => {
         const fileURL = window.URL.createObjectURL(blob);
@@ -66,7 +66,7 @@ const App = () => {
             </p>
           </div>
 
-          <button id="downloadCV" className='button action' onClick={onDownloadClick}>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></button>
+          <button id="downloadCV" className='button action' onClick={onDownloadCvClick}>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></button>
         </div>
       </div>
     </div>
