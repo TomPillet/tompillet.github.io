@@ -5,7 +5,9 @@
 
 * {
   --main-bg-color: #161616;
+  --second-bg-color: #1a1a1a;
   --main-border-color: #323232;
+  --second-border-color: #444;
   --main-content-color: #f1f1f1;
   --second-content-color: #e4e4e4;
   --main-navbar-color: #d6d6d6;
@@ -152,8 +154,14 @@ a {
   }
 }
 
+.wrapper {
+  margin: 60px 0px;
+  display: block;
+}
+
 .presentation-wrapper {
   margin: auto;
+  padding-top: 0px;
   width: 80vw;
 
   & .button {
@@ -185,4 +193,10 @@ a {
     position: absolute; top: 0; bottom: 0; left: 0px; right: 0px;
     box-shadow: inset -64px 0px 80px var(--main-bg-color);
   }
+}
+
+.competences-wrapper {
+  background-color: var(--second-bg-color);
+  height: 240px;
+  padding: 16px 4vw;
 }

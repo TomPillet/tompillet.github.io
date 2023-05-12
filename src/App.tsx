@@ -54,7 +54,7 @@ const App = () => {
       </header>
 
       <div className='content'>
-        <div className="presentation-wrapper">
+        <div className="wrapper presentation-wrapper">
           <div className='photo-container'>
             <img id="photoCV" src={photoCV} alt="" />
             <p id="photoHeadings">Salut, moi c'est <span>Tom</span></p>
@@ -67,6 +67,10 @@ const App = () => {
           </div>
 
           <button id="downloadCV" className='button action' onClick={onDownloadCvClick}>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></button>
+        </div>
+
+        <div className="wrapper competences-wrapper">
+
         </div>
       </div>
     </div>
