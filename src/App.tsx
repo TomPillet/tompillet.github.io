@@ -21,6 +21,18 @@ const App = () => {
   //   return () => clearInterval(neonInterval);
   // })  
 
+  const onDownloadClick = () => {
+    fetch('CV_TomPILLET.pdf').then(response => {
+      response.blob().then(blob => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'CV_TomPILLET.pdf';
+        alink.click();
+      })
+    })
+  }
+ 
   return (
     <div className="App">
       <header className='header'>
@@ -29,10 +41,10 @@ const App = () => {
           <div className="links">
             <ul className='links-list'>
               <li className="link-item">
-                <a id="github" target='blank' href="https://github.com/TomPillet">Github</a>
+                <a id="github" className='link' target='blank' href="https://github.com/TomPillet">Github</a>
               </li>
               <li className="link-item">
-                <a id="linkedin" target='blank' href="https://www.linkedin.com/in/tom-pillet/">Linkedin</a>
+                <a id="linkedin" className='link' target='blank' href="https://www.linkedin.com/in/tom-pillet/">Linkedin</a>
               </li>
             </ul>
           </div>
@@ -54,7 +66,7 @@ const App = () => {
             </p>
           </div>
 
-          <button id="downloadCV" className='button action'>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload} /></button>
+          <button id="downloadCV" className='button action' onClick={onDownloadClick}>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></button>
         </div>
       </div>
     </div>

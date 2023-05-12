@@ -28,16 +28,17 @@ ol, ul, li {
 a {
   text-decoration: none;
 
-  &:hover {
+  &.link:hover {
     border-bottom: var(--main-navbar-color) 1px solid;
   }
 }
 
-button {
+.button {
   padding: 12px 24px;
   background-color: var(--main-bg-color);
   border: solid 1px var(--main-border-color);
   border-radius: 20px;
+  width: fit-content;
 }
 
 .content {
