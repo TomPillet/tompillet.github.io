@@ -3,6 +3,8 @@ import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
+import DragSlider from './components/DragSlider/DragSlider';
+
 import photoCV from './medias/photocv_profil.jpg';
 
 const App = () => {
@@ -70,7 +72,7 @@ const App = () => {
         </div>
 
         <div className="wrapper competences-wrapper">
-
+          <DragSlider id="competences-slider"></DragSlider>
         </div>
       </div>
     </div>
