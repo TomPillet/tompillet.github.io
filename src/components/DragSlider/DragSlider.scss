@@ -14,11 +14,11 @@
         margin: 0px 40px;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 50%;
+        background-size: 60%;
     }
 
     &.on-drag {
-        transform: scale(105%);
+        transform: scale(110%);
         transition: all .3s;
     }
 }

@@ -210,4 +210,11 @@ p {
   height: 240px;
   padding: 16px 0px;
   cursor: grab;
+  opacity: 75%;
+  transition: all .3s;
+
+  &:hover {
+    opacity: 100%;
+    transition: all .3s;
+  }
 }
