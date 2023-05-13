@@ -3,9 +3,10 @@ import './DragSlider.scss';
 
 interface DragSliderProps {
   id: string,
+  data: Array<any>
 }
 
-export const DragSlider: FC<DragSliderProps> = ({id}) => {
+export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
   let isDown = false;
   
   const onClickDrag = (e: any) => {
@@ -38,14 +39,13 @@ export const DragSlider: FC<DragSliderProps> = ({id}) => {
 
   return (
     <div id={id} className='drag-slider' onMouseDown={onClickDrag}>
-      <div className="item"></div>
-      <div className="item"></div>
-      <div className="item"></div>
-      <div className="item"></div>
-      <div className="item"></div>
-      <div className="item"></div>
-      <div className="item"></div>
-      <div className="item"></div>
+      {
+        data.map(item => {
+          return (
+            <div key={item.id} className="item" style={{backgroundImage: "url("+require('../../'+item.url)+")"}}></div>
+          )
+        })
+      }
     </div>
   )
 };

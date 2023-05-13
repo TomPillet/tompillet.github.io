@@ -5,6 +5,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import DragSlider from './components/DragSlider/DragSlider';
 
+import competencesUrls from './competences-urls.json';
 import photoCV from './medias/photocv_profil.jpg';
 
 const App = () => {
@@ -72,7 +73,7 @@ const App = () => {
         </div>
 
         <div className="wrapper competences-wrapper">
-          <DragSlider id="competences-slider"></DragSlider>
+          <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
         </div>
       </div>
     </div>
