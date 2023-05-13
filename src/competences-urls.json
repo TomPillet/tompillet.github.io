@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "url": "medias/competences/logo-angular.png"
+    },
+    {
+        "id": 2,
+        "url": "medias/competences/logo-css.png"
+    },
+    {
+        "id": 3,
+        "url": "medias/competences/logo-figma.png"
+    },
+    {
+        "id": 4,
+        "url": "medias/competences/logo-git.png"
+    },
+    {
+        "id": 5,
+        "url": "medias/competences/logo-godot.png"
+    },
+    {
+        "id": 6,
+        "url": "medias/competences/logo-js.png"
+    },
+    {
+        "id": 7,
+        "url": "medias/competences/logo-laravel.png"
+    },
+    {
+        "id": 8,
+        "url": "medias/competences/logo-linux.png"
+    },
+    {
+        "id": 9,
+        "url": "medias/competences/logo-php.jpg"
+    },
+    {
+        "id": 10,
+        "url": "medias/competences/logo-prestashop.png"
+    },
+    {
+        "id": 11,
+        "url": "medias/competences/logo-react.png"
+    },
+    {
+        "id": 12,
+        "url": "medias/competences/logo-tailwind.png"
+    },
+    {
+        "id": 13,
+        "url": "medias/competences/logo-ts.png"
+    }
+]
