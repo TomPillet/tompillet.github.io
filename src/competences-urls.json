@@ -1,54 +1,67 @@
 [
     {
-        "id": 1,
-        "url": "medias/competences/logo-angular.png"
+        "id": "git",
+        "url": "medias/competences/logo-git.png",
+        "title": "Git"
     },
     {
-        "id": 2,
-        "url": "medias/competences/logo-css.png"
+        "id": "js",
+        "url": "medias/competences/logo-js.png",
+        "title": "JavaScript"
     },
     {
-        "id": 3,
-        "url": "medias/competences/logo-figma.png"
+        "id": "php",
+        "url": "medias/competences/logo-php.jpg",
+        "title": "PHP"
     },
     {
-        "id": 4,
-        "url": "medias/competences/logo-git.png"
+        "id": "rct",
+        "url": "medias/competences/logo-react.png",
+        "title": "React"
     },
     {
-        "id": 5,
-        "url": "medias/competences/logo-godot.png"
+        "id": "ts",
+        "url": "medias/competences/logo-ts.png",
+        "title": "TypeScript"
     },
     {
-        "id": 6,
-        "url": "medias/competences/logo-js.png"
+        "id": "ng",
+        "url": "medias/competences/logo-angular.png",
+        "title": "Angular"
     },
     {
-        "id": 7,
-        "url": "medias/competences/logo-laravel.png"
+        "id": "lnx",
+        "url": "medias/competences/logo-linux.png",
+        "title": "Linux"
     },
     {
-        "id": 8,
-        "url": "medias/competences/logo-linux.png"
+        "id": "lar",
+        "url": "medias/competences/logo-laravel.png",
+        "title": "Laravel"
     },
     {
-        "id": 9,
-        "url": "medias/competences/logo-php.jpg"
+        "id": "scss",
+        "url": "medias/competences/logo-scss.png",
+        "title": "SCSS"
     },
     {
-        "id": 10,
-        "url": "medias/competences/logo-prestashop.png"
+        "id": "tlw",
+        "url": "medias/competences/logo-tailwind.png",
+        "title": "Tailwind"
     },
     {
-        "id": 11,
-        "url": "medias/competences/logo-react.png"
+        "id": "fig",
+        "url": "medias/competences/logo-figma.png",
+        "title": "Figma"
     },
     {
-        "id": 12,
-        "url": "medias/competences/logo-tailwind.png"
+        "id": "prs",
+        "url": "medias/competences/logo-prestashop.png",
+        "title": "Prestashop"
     },
     {
-        "id": 13,
-        "url": "medias/competences/logo-ts.png"
+        "id": "gd",
+        "url": "medias/competences/logo-godot.png",
+        "title": "Godot"
     }
 ]
