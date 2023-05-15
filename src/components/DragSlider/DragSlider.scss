@@ -22,17 +22,18 @@
         }
 
         & .item-title {
-            color: var(--second-content-color);
+            color: var(--main-content-color);
             display: block;
             margin: auto;
             width: min-content;
             font-size: .8em;
+            opacity: 0%;
             transition: all .8s;
         }
 
         &:hover .item-title {
-            color: var(--main-content-color);
             font-size: .9em;
+            opacity: 100%;
             transition: all .8s;
         }
     }
@@ -43,7 +44,6 @@
     }
 
     &.on-drag .item-title {
-        opacity: 0%;
-        transition: opacity .2s;
+        display: none;
     }
 }
