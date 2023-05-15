@@ -9,7 +9,7 @@
   --main-border-color: #323232;
   --second-border-color: #444;
   --main-content-color: #f1f1f1;
-  --second-content-color: #e4e4e4;
+  --second-content-color: #cfcfcf;
   --third-content-color: #888888;
   --main-navbar-color: #d6d6d6;
 
@@ -210,11 +210,9 @@ p {
   height: 240px;
   padding: 16px 0px;
   cursor: grab;
-  opacity: 75%;
   transition: all .3s;
 
   &:hover {
-    opacity: 100%;
     transition: all .3s;
   }
 }

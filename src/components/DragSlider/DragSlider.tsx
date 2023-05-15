@@ -42,11 +42,13 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
       {
         data.map(item => {
           return (
-            <div key={item.id} 
-              className="item"
-              style={{backgroundImage: "url("+require('../../'+item.url)+")"}}
-              title={item.title}
-            ></div>
+            <div key={item.id} className='item'>
+              <div 
+                className="item-image"
+                style={{backgroundImage: "url("+require('../../'+item.url)+")"}}
+              ></div>
+              <span className='item-title'>{item.title}</span>
+            </div>
           )
         })
       }

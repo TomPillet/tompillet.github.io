@@ -11,14 +11,39 @@
         display: block;
         height: 100%;
         min-width: 240px;
-        margin: 0px 40px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 60%;
+        margin: 0px 4vw;
+
+        & .item-image {
+            margin-top: 1%;
+            height: 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+        }
+
+        & .item-title {
+            color: var(--second-content-color);
+            display: block;
+            margin: auto;
+            width: min-content;
+            font-size: .8em;
+            transition: all .8s;
+        }
+
+        &:hover .item-title {
+            color: var(--main-content-color);
+            font-size: .9em;
+            transition: all .8s;
+        }
     }
 
     &.on-drag {
-        transform: scale(110%);
+        transform: scale(105%);
         transition: all .3s;
+    }
+
+    &.on-drag .item-title {
+        opacity: 0%;
+        transition: opacity .2s;
     }
 }
