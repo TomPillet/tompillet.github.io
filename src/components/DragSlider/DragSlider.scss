@@ -1,3 +1,9 @@
+.drag-slider-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .drag-slider {
     display: flex;
     flex-direction: row;
@@ -42,8 +48,36 @@
         transform: scale(105%);
         transition: all .3s;
     }
-
     &.on-drag .item-title {
         display: none;
+    }
+}
+
+.drag-slider-button {
+    position: absolute;
+    z-index: 1000;
+    margin: 0px 20px;
+    padding: 16px 20px;
+    background-color: rgba($color: #000000, $alpha: .8);
+    border: 1px solid black;
+    border-radius: 12%;
+    color: white;
+    font-size: 1.8em;
+    opacity: 100%;
+    transition: all .3s;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.left {
+        left: 0;
+    }
+    &.right {
+        right: 0;
+    }
+    &.hide {
+        opacity: 0%;
+        transition: all .3s;
     }
 }
