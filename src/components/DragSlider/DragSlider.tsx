@@ -11,7 +11,7 @@ interface DragSliderProps {
 export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
   let sliderActive = false;
 
-  const onClickDrag = (e: any) => {
+  function onClickDrag(e: any) {
     const slider = document.getElementById(id)!;
     const sliderButtonLeft = document.querySelector('.drag-slider-button.left');
     const sliderButtonRight = document.querySelector('.drag-slider-button.right');
@@ -39,14 +39,17 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
       removeDragStatement(slider);
       hideOrShowButtons(sliderButtonLeft, sliderButtonRight, slider);
     });
+
+    return;
   }
 
-  const removeDragStatement = (slider: any) => {
+  function removeDragStatement(slider: any) {
     slider.classList.remove('on-drag');
     sliderActive = false;
+    return;
   }
 
-  const hideOrShowButtons = (buttonLeft: any, buttonRight: any, slider: any) => {
+  function hideOrShowButtons(buttonLeft: any, buttonRight: any, slider: any) {
     if (slider.scrollLeft === 0 || sliderActive) {
       buttonLeft.classList.add('hide');
     } else {
@@ -59,11 +62,15 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
     }
   }
 
-  function goLeft() {
-    document.getElementById(id)!.scrollLeft -= window.innerWidth;
+  function goLeft(e: any) {
+    const slider = document.getElementById(id);
+    slider!.scrollLeft -= window.innerWidth;
+    hideOrShowButtons(e.target, document.querySelector('.drag-slider-button.right'), slider);
   }
-  function goRight() {
-    document.getElementById(id)!.scrollLeft += window.innerWidth;
+  function goRight(e: any) {
+    const slider = document.getElementById(id);
+    slider!.scrollLeft += window.innerWidth;
+    hideOrShowButtons(document.querySelector('.drag-slider-button.left'), e.target, slider);
   }
 
   return (
