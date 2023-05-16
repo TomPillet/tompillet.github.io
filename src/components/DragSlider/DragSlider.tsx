@@ -59,12 +59,19 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
     }
   }
 
+  function goLeft() {
+    document.getElementById(id)!.scrollLeft -= window.innerWidth;
+  }
+  function goRight() {
+    document.getElementById(id)!.scrollLeft += window.innerWidth;
+  }
+
   return (
     <div className='drag-slider-container'>
-      <button className='drag-slider-button left hide'>
+      <button className='drag-slider-button left hide' onClick={goLeft}>
         <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
       </button>
-      <button className='drag-slider-button right'>
+      <button className='drag-slider-button right' onClick={goRight}>
         <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
       </button>
 
