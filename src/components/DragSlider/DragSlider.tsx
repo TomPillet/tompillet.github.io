@@ -97,7 +97,7 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
         <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
       </button>
 
-      <div id={id} className='drag-slider' onMouseDown={onClickDrag}>
+      <div id={id} className='drag-slider' onMouseDown={onClickDrag} title="You can horizontally drag this or use the buttons on the side">
         {
           data.map(item => {
             return (
