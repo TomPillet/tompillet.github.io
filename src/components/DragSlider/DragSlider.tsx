@@ -10,6 +10,7 @@ interface DragSliderProps {
 
 export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
   let sliderActive = false;
+  let sliderSpeed = 60;
 
   function onClickDrag(e: any) {
     const slider = document.getElementById(id)!;
@@ -64,13 +65,27 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
 
   function goLeft(e: any) {
     const slider = document.getElementById(id);
-    slider!.scrollLeft -= window.innerWidth;
-    hideOrShowButtons(e.target, document.querySelector('.drag-slider-button.right'), slider);
+    let i = 0;
+    const goLeftInterval = setInterval(() => {
+      slider!.scrollLeft -= sliderSpeed;
+      i += sliderSpeed;
+      if (i >= window.innerWidth) {
+        hideOrShowButtons(e.target, document.querySelector('.drag-slider-button.right'), slider);
+        clearInterval(goLeftInterval);
+      } 
+    },1);
   }
   function goRight(e: any) {
     const slider = document.getElementById(id);
-    slider!.scrollLeft += window.innerWidth;
-    hideOrShowButtons(document.querySelector('.drag-slider-button.left'), e.target, slider);
+    let i = 0;
+    const goRightInterval = setInterval(() => {
+      slider!.scrollLeft += sliderSpeed;
+      i += sliderSpeed;
+      if (i >= window.innerWidth) {
+        hideOrShowButtons(document.querySelector('.drag-slider-button.left'), e.target, slider);
+        clearInterval(goRightInterval);
+      } 
+    },1);
   }
 
   return (
