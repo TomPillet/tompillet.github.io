@@ -9,25 +9,7 @@ import competencesUrls from './competences-urls.json';
 import photoCV from './medias/photocv_profil.jpg';
 
 const App = () => {
-  const neonOpacity = 100;
-
-  // NEON'S ANIMATION : import useState to enable neon animation
-  // const [neonOpacity, setNeonOpacity] = useState(100);
-  // let randIntervalDelay = (neonOpacity != 100) ? 80 : Math.floor(Math.random() * (1000 - 200) + 200);
-
-  // let randTrueOrFalse = () => {
-  //   return (Math.floor(Math.random() * (3 - 1) + 1) % 2) === 0;
-  // }
-
-  // useEffect(() => {
-  //   const neonInterval = setInterval(() => {
-  //     setNeonOpacity((randTrueOrFalse()) ? 100 : (Math.random() * neonOpacity));
-  //   }, randIntervalDelay);
-    
-  //   return () => clearInterval(neonInterval);
-  // })  
- 
-  return (
+   return (
     <div className="App">
       <header className='header'>
         <nav className='navbar'>
@@ -44,7 +26,7 @@ const App = () => {
           </div>
         </nav>
 
-        <span className="navbar-neon" style={{'opacity': neonOpacity+'%'}}></span>
+        <span className="navbar-neon"></span>
       </header>
 
       <div className='content'>
