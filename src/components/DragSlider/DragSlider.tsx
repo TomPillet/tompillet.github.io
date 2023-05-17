@@ -1,14 +1,17 @@
 import React, { FC } from 'react';
 import './DragSlider.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
+import AnimatedSlidingArrows from '../AnimatedSlidingArrows/AnimatedSlidingArrows';
 
 interface DragSliderProps {
   id: string,
   data: Array<any>
 }
 
-export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
+const DragSlider: FC<DragSliderProps> = ({id, data}) => {
   let sliderActive = false;
   let sliderSpeed = 60;
 
@@ -80,6 +83,8 @@ export const DragSlider: FC<DragSliderProps> = ({id, data}) => {
 
   return (
     <div className='drag-slider-container'>
+      <AnimatedSlidingArrows></AnimatedSlidingArrows>
+
       <button id="left" className='drag-slider-button hide' onClick={moveTo}>
         <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
       </button>
