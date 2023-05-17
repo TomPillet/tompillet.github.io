@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +9,10 @@ import competencesUrls from './competences-urls.json';
 import photoCV from './medias/photocv_profil.jpg';
 
 const App = () => {
-  const [neonOpacity, setNeonOpacity] = useState(100);
+  const neonOpacity = 100;
+
+  // NEON'S ANIMATION : import useState to enable neon animation
+  // const [neonOpacity, setNeonOpacity] = useState(100);
   // let randIntervalDelay = (neonOpacity != 100) ? 80 : Math.floor(Math.random() * (1000 - 200) + 200);
 
   // let randTrueOrFalse = () => {
