@@ -26,18 +26,6 @@ const App = () => {
     
   //   return () => clearInterval(neonInterval);
   // })  
-
-  const onDownloadCvClick = () => {
-    fetch('CV_TomPILLET.pdf').then(response => {
-      response.blob().then(blob => {
-        const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'CV_TomPILLET.pdf';
-        alink.click();
-      })
-    })
-  }
  
   return (
     <div className="App">
@@ -72,7 +60,7 @@ const App = () => {
             </p>
           </div>
 
-          <button id="downloadCV" className='button action' onClick={onDownloadCvClick}>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></button>
+          <a id="downloadCV" className='button action' href="CV_TomPILLET.pdf" download>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></a>
         </div>
 
         <div className="wrapper competences-wrapper">
