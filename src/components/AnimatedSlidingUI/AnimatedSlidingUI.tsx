@@ -7,10 +7,9 @@ interface AnimatedSlidingUIProps {
 
 const AnimatedSlidingUI: FC<AnimatedSlidingUIProps> = ({show}) => {
   return (
-    <div className="arrows" style={{display: (show) ? 'block' : 'none'}}>
+    <div className="animation-container" style={{display: (show) ? 'block' : 'none'}}>
       <span></span>
-      <span></span>
-      <span></span>
+      <p>SLIDE HERE</p>
     </div>
   )
 };
