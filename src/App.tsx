@@ -42,7 +42,7 @@ const App = () => {
             </p>
           </div>
 
-          <a id="downloadCV" className='button action' href="CV_TomPILLET.pdf" download>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></a>
+          <a id="downloadCV" className='button action' href="CV_TomPILLET-fr.pdf" download>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></a>
         </div>
 
         <div className="wrapper competences-wrapper">
