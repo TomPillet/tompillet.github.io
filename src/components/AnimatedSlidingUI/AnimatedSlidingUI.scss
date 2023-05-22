@@ -13,8 +13,9 @@
 }
 
 .arrows {
-    position: relative;
-    height: 100%;
+    position: absolute;
+    right: 50%;
+    z-index: 1000;
     transform: rotate(-90deg);
     cursor: pointer;
 
@@ -35,4 +36,6 @@
             animation-delay: -0.4s;
         }
     }
+
+    
 }

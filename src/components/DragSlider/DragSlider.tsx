@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import './DragSlider.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-import AnimatedSlidingArrows from '../AnimatedSlidingArrows/AnimatedSlidingArrows';
+import AnimatedSlidingUI from '../AnimatedSlidingUI/AnimatedSlidingUI';
 
 interface DragSliderProps {
   id: string,
@@ -12,6 +12,9 @@ interface DragSliderProps {
 }
 
 const DragSlider: FC<DragSliderProps> = ({id, data}) => {
+  const [sliderOpacity, setSliderOpacity] = useState(10);
+  const [sliderActivatedOnce, setSliderActivatedOnce] = useState(false);
+
   let sliderActive = false;
   let sliderSpeed = 60;
 
@@ -21,6 +24,8 @@ const DragSlider: FC<DragSliderProps> = ({id, data}) => {
     const sliderButtonRight = document.querySelector('.drag-slider-button#right');
     sliderActive = true;
     hideOrShowButtons(sliderButtonLeft, sliderButtonRight, slider);
+    setSliderOpacity(100);
+    setSliderActivatedOnce(true);
 
     let startX = e.pageX - slider.offsetLeft;
     let scrollLeft = slider.scrollLeft;
@@ -83,16 +88,16 @@ const DragSlider: FC<DragSliderProps> = ({id, data}) => {
 
   return (
     <div className='drag-slider-container'>
-      <AnimatedSlidingArrows></AnimatedSlidingArrows>
+      <AnimatedSlidingUI show={!sliderActivatedOnce}></AnimatedSlidingUI>
 
       <button id="left" className='drag-slider-button hide' onClick={moveTo}>
         <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
       </button>
-      <button id="right" className='drag-slider-button' onClick={moveTo}>
+      <button id="right" className='drag-slider-button hide' onClick={moveTo}>
         <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
       </button>
 
-      <div id={id} className='drag-slider' onMouseDown={onClickDrag} title="You can horizontally drag this or use the buttons on the side">
+      <div id={id} className='drag-slider' onMouseDown={onClickDrag} style={{opacity: sliderOpacity+'%'}}>
         {
           data.map(item => {
             return (
