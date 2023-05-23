@@ -38,7 +38,7 @@ const App = () => {
 
           <div className='presentation-container'>
             <p className="presentation-keywords">
-              Développeur,<br/> créatif,<br/> ambitieux.
+              Développeur junior,<br/> ambitieux et motivé.
             </p>
           </div>
 

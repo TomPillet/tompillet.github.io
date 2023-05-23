@@ -67,11 +67,11 @@ p {
 }
 .navbar-neon {
   position: absolute;
-  height: 2px;
+  height: 1px;
   width: 72vw;
   top: 80px;
   left: 14vw;
-  background-color: #fff;
+  background-color: var(--second-content-color);
 }
 
 .title {
@@ -188,7 +188,7 @@ p {
   font-size: 2.8em;
   margin: auto;
   padding: 8px 0px 24px 0px;
-  width: 360px;
+  width: fit-content;
   text-align: center;
   color: var(--second-content-color);
 
