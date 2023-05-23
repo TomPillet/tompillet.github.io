@@ -1,15 +1,24 @@
 @keyframes slidingUI {
     0% {
-        transform: translateX(80vw) scale(1, .1);
+        transform: translateX(80vw) scale(.01, .01);
     }
-    98% {
-        transform: translateX(30vw) scale(3,3);
+    80%, 100% {
+        transform: translateX(30vw) scale(1,1);
     }
     100% {
         opacity: 0;
     }
     0%, 90% {
         opacity: 1;
+    }
+}
+
+@keyframes pinging {
+    0% {
+        transform: scale(.5);
+    }
+    100% {
+        transform: scale(1.5);
     }
 }
 
@@ -30,11 +39,23 @@
 
     & span {
         display: block;
-        width: 10px;
-        height: 10px;
+        width: 28px;
+        height: 28px;
         background-color: white;
         border-radius: 100%;
-        animation: slidingUI 2s infinite;
+        animation: slidingUI 4s infinite;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            border: 1px solid var(--second-content-color);
+            border-radius: 100%;
+            padding: 96%;
+            top: -50%;
+            left: -50%;
+            animation: pinging 2s infinite, fading 2s infinite;
+        }
     }
 
     & p {
@@ -47,6 +68,6 @@
         font-weight: 300;
         letter-spacing: .2em;
         text-align: center;
-        animation: fading 2s infinite;
+        animation: fading 4s infinite;
     }
 }
