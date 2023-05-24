@@ -33,7 +33,8 @@
 
 .animation-container {
     position: absolute;
-    width: 100%;
+    height: 0px;
+    width: 100vw;
     z-index: 1;
     cursor: pointer;
 
