@@ -3,7 +3,9 @@ import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
+import AppHeader from './components/AppHeader/AppHeader';
 import DragSlider from './components/DragSlider/DragSlider';
+
 
 import competencesUrls from './competences-urls.json';
 import photoCV from './medias/photocv_profil.jpg';
@@ -11,23 +13,7 @@ import photoCV from './medias/photocv_profil.jpg';
 const App = () => {
    return (
     <div className="App">
-      <header className='header'>
-        <nav className='navbar'>
-          <h6 className="title">Tom Pillet</h6>
-          <div className="links">
-            <ul className='links-list'>
-              <li className="link-item">
-                <a id="github" className='link' target='blank' href="https://github.com/TomPillet">Github</a>
-              </li>
-              <li className="link-item">
-                <a id="linkedin" className='link' target='blank' href="https://www.linkedin.com/in/tom-pillet/">Linkedin</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <span className="navbar-neon"></span>
-      </header>
+      <AppHeader></AppHeader>
 
       <div className='content'>
         <div className="wrapper presentation-wrapper">
