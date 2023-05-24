@@ -103,6 +103,21 @@ p {
 .wrapper {
   margin: 160px 0px;
   display: block;
+
+  & .wrapper-header, & .wrapper-footer {
+    padding: 24px 0px;
+    background-color: var(--second-bg-color);
+
+    & h3 {
+      width: fit-content;
+      margin: auto;
+      color: var(--main-content-color);
+      font-size: 1.6em;
+      letter-spacing: .4em;
+      transform: skewX(-10deg);
+      text-transform: uppercase;
+    }
+  }
 }
 
 .presentation-wrapper {
@@ -146,7 +161,7 @@ p {
 }
 
 .competences-wrapper {
-  background-color: var(--second-bg-color);
+  background-color: var(--third-bg-color);
   height: 240px;
   padding: 64px 0px;
   cursor: grab;

@@ -32,9 +32,13 @@ const App = () => {
         </div>
 
         <div className="wrapper">
+          <div className="wrapper-header">
+            <h3>Compétences techniques</h3>
+          </div>
           <div className="competences-wrapper">
             <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
           </div>
+          <div className="wrapper-footer"></div>
         </div>
       </div>
     </div>
