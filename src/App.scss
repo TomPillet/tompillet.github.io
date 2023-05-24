@@ -1,19 +1,8 @@
+@import url(vars.css);
+
 @keyframes slideIn {
   from { margin-left: -100%; }
   to { margin-left: 0%; }
-}
-
-* {
-  --main-bg-color: #161616;
-  --second-bg-color: #1a1a1a;
-  --main-border-color: #323232;
-  --second-border-color: #444;
-  --main-content-color: #f1f1f1;
-  --second-content-color: #cfcfcf;
-  --third-content-color: #888888;
-  --main-navbar-color: #d6d6d6;
-
-  // color: var(--main-content-color);
 }
 
 body {
@@ -33,7 +22,7 @@ a {
   text-decoration: none;
 
   &.link:hover {
-    border-bottom: var(--main-navbar-color) 1px solid;
+    border-bottom: var(--main-content-color) 1px solid;
   }
 }
 

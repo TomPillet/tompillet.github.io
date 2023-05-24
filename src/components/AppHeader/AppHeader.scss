@@ -5,7 +5,7 @@
     align-items: center;
     padding: 32px 0px;
     margin: 0px 16vw;
-    color: var(--main-navbar-color) !important;
+    color: var(--main-content-color) !important;
   }
   .navbar-neon {
     position: absolute;
@@ -38,6 +38,6 @@
     }
   
     & a {
-      color: var(--main-navbar-color);
+      color: var(--main-content-color);
     }
   }

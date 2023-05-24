@@ -1,0 +1,11 @@
+* {
+    --main-bg-color: #161616;
+    --second-bg-color: #1a1a1a;
+
+    --main-border-color: #323232;
+    --second-border-color: #444;
+
+    --main-content-color: #f1f1f1;
+    --second-content-color: #cfcfcf;
+    --third-content-color: #888888;
+}
