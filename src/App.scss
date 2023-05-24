@@ -101,8 +101,8 @@ p {
 }
 
 .photo-container {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   margin: auto;
   padding: 40px 0px;
 
@@ -119,7 +119,7 @@ p {
       &:after {
         content: '';
         position: relative;
-        left: 69%;
+        left: 72%;
         display: block;
         height: 1px;
         width: 0px;
@@ -155,13 +155,13 @@ p {
 }
 
 .wrapper {
-  margin: 120px 0px;
+  margin: 160px 0px;
   display: block;
 }
 
 .presentation-wrapper {
   margin: auto;
-  padding-top: 0px;
+  padding-top: 40px;
   width: 80vw;
 
   & .button {

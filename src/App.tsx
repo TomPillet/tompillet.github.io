@@ -45,8 +45,10 @@ const App = () => {
           <a id="downloadCV" className='button action' href="CV_TomPILLET-fr.pdf" download>Télécharger le CV <FontAwesomeIcon className='icon' icon={faDownload}/></a>
         </div>
 
-        <div className="wrapper competences-wrapper">
-          <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
+        <div className="wrapper">
+          <div className="competences-wrapper">
+            <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
+          </div>
         </div>
       </div>
     </div>
