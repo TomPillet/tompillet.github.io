@@ -1,4 +1,6 @@
 import React from 'react';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +12,6 @@ import DragSlider from './components/DragSlider/DragSlider';
 import photoCV from './medias/photocv_profil.jpg';
 
 import competencesUrls from './competences-urls.json';
-import { useTranslation } from 'react-i18next';
 
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
             </p>
           </div>
 
-          <a id="downloadCV" className='button action' href="CV_TomPILLET-fr.pdf" download>{t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/></a>
+          <a id="downloadCV" className='button action' href={"CV_TomPILLET-"+i18next.language+".pdf"} download>{t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/></a>
         </div>
 
         <div className="wrapper">
