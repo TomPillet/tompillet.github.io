@@ -4,12 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import detector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
-
 
 i18n
   .use(detector)
@@ -22,7 +20,6 @@ i18n
       escapeValue: false,
     },
 });
-
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
