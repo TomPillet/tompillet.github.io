@@ -34,7 +34,9 @@ const App = () => {
             </p>
           </div>
 
-          <a id="downloadCV" className='button action' href={"CV_TomPILLET-"+i18next.language+".pdf"} download>{t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/></a>
+          <a id="downloadCV" className='button action' href={"CV_TomPILLET-"+i18next.language+".pdf"} download>
+            {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
+          </a>
         </div>
 
         <div className="wrapper">
