@@ -24,7 +24,7 @@ const App = () => {
       <div className='content'>
         <div className="wrapper presentation-wrapper">
           <div className='photo-container'>
-            <img id="photoCV" src={photoCV} alt="" />
+            <img id="photoCV" src={photoCV} alt="Tom PILLET" />
             <p id="photoHeadings">{t("hi_im")} <span>Tom</span></p>
           </div>
 
