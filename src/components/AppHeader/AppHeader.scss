@@ -19,15 +19,18 @@
 
 .languages-dropdown {
   display: block;
+  height: 24px;
+  width: fit-content;
 
   & .current-language {
-    display: flex;
+    display: block;
+    height: 100%;
     margin-left: 4px;
-    margin-bottom: 4px;
+    padding-bottom: 16px;
     cursor: pointer;
 
-    & .language-flag {
-      height: 24px;
+    & .languages-dropdown-trigger {
+      height: 100%;
       filter: grayscale(.2);
     }
   }
@@ -44,11 +47,22 @@
     background-color: var(--second-bg-color);
     padding: 12px 10px;
 
+    &:before {
+      content: '';
+      height: 8px; width: 8px;
+      border: 1px solid var(--main-border-color);
+      border-bottom: none;
+      border-right: none;
+      background-color: var(--second-bg-color);
+      transform: rotate(45deg);
+      position: absolute;
+      top: -6px;
+      left: 22px;
+    }
+
     & .language-button {
       display: flex;
       flex-direction: row;
-      padding: 0;
-      margin: 0;
       border: none;
       background: none;
       color: var(--second-content-color);
@@ -61,6 +75,16 @@
         cursor: pointer;
         filter: grayscale(.2);
         transition: filter .3s;
+
+        & span {
+          color: var(--main-content-color);
+          transition: color .3s;  
+
+          &.underline:after {
+            background-color: var(--main-content-color);
+            transition: background-color .3s;  
+          }
+        }
       }
 
       &:not(:last-child) {
@@ -68,7 +92,19 @@
       }
 
       & span {
+        display: block;
+        color: var(--third-content-color);
         margin-left: 8px;
+        transition: color .3s;
+
+        &.underline:after {
+          content: '';
+          display: block;
+          height: 2px;
+          width: 20px;
+          background-color: var(--third-content-color);
+          transition: background-color .3s;  
+        }
       }
     }
   }
