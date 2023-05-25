@@ -6,37 +6,104 @@
     padding: 32px 0px;
     margin: 0px 16vw;
     color: var(--main-content-color) !important;
-  }
-  .navbar-neon {
-    position: absolute;
-    height: 1px;
-    width: 72vw;
-    top: 80px;
-    left: 14vw;
-    background-color: var(--second-content-color);
-  }
-  
-  .title {
-    font-weight: 600;
-  }
-  
-  .links-list {
+}
+
+.navbar-neon {
+  position: absolute;
+  height: 1px;
+  width: 72vw;
+  top: 80px;
+  left: 14vw;
+  background-color: var(--second-content-color);
+}
+
+.languages-dropdown {
+  display: block;
+
+  & .current-language {
     display: flex;
-    flex-direction: row;
-    margin: 0;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    & .language-flag {
+      height: 24px;
+      filter: grayscale(.2);
+    }
   }
+
+  & .languages-list {
+    display: none;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    z-index: 10;
+    transform: translateX(-12px);
+    border: 1px solid var(--main-border-color);
+    border-radius: 4px;
+    background-color: var(--second-bg-color);
+    padding: 12px 10px;
+
+    & .language-button {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      color: var(--second-content-color);
+      font-weight: 800;
+      letter-spacing: .1em;
+      filter: grayscale(1);
+      transition: filter .3s;
   
-  .link-item {
+      &:hover {
+        cursor: pointer;
+        filter: grayscale(.2);
+        transition: filter .3s;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      & span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  & .language-flag {
+    display: block;
+    height: 18px;
+  }
+
+  &:hover > .languages-list {
+    display: flex;
+  }
+}
+
+.title {
+  font-weight: 600;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.link-item {
+  margin-left: 12px;
+  font-size: .9em;
+  font-weight: 400;
+  
+  &:not(:last-child):after {
+    content: '/';
     margin-left: 12px;
-    font-size: .9em;
-    font-weight: 400;
-    
-    &:not(:last-child):after {
-      content: '/';
-      margin-left: 12px;
-    }
-  
-    & a {
-      color: var(--main-content-color);
-    }
   }
+
+  & a {
+    color: var(--main-content-color);
+  }
+}
