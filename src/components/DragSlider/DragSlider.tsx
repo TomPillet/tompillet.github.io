@@ -104,7 +104,7 @@ const DragSlider: FC<DragSliderProps> = ({id, data}) => {
               <div key={item.id} className='item'>
                 <div 
                   className="item-image"
-                  style={{backgroundImage: "url("+require('../../'+item.url)+")"}}
+                  style={{backgroundImage: `url(${require('../../'+item.url)})`}}
                 ></div>
                 <span className='item-title'>{item.title}</span>
               </div>
