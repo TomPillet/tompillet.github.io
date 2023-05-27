@@ -13,13 +13,22 @@ const AppHeader: FC<AppHeaderProps> = () => (
   <header className='header'>
     <nav className='navbar'>
       <div className="languages-dropdown">
-        <div className="current-language">
-          <FontAwesomeIcon className="languages-dropdown-trigger" icon={faGlobe}></FontAwesomeIcon>
+        <div className="languages-dropdown-trigger">
+          <FontAwesomeIcon className="languages-icon" icon={faGlobe}></FontAwesomeIcon>
         </div>
 
         <div className="languages-list">
-          <button className="language-button" onClick={() => changeLanguage('en')}> <img className="language-flag" src={iconEN} alt="English flag" /> <span className={(i18next.language === "en") ? "underline" : ""}>EN</span> </button>
-          <button className="language-button" onClick={() => changeLanguage('fr')}> <img className="language-flag" src={iconFR} alt="French flag" /> <span className={(i18next.language === "fr") ? "underline" : ""}>FR</span> </button>
+          <button className={`language-button ${(i18next.language === 'en') ? "current-language" : ""}`}
+                  onClick={() => changeLanguage('en')}> 
+            <img className="language-flag" src={iconEN} alt="English flag" />
+            <span className={(i18next.language === "en") ? "underline" : ""}>EN</span> 
+          </button>
+
+          <button className={`language-button ${(i18next.language === 'fr') ? "current-language" : ""}`}
+                  onClick={() => changeLanguage('fr')}> 
+            <img className="language-flag" src={iconFR} alt="French flag" />
+            <span className={(i18next.language === "fr") ? "underline" : ""}>FR</span> 
+          </button>
         </div>
       </div>
 
