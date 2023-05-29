@@ -78,6 +78,10 @@ p {
   transition: all .4s;
 }
 
+.no-display {
+  display: none !important;
+}
+
 .photo-container {
   height: 180px;
   width: 180px;
