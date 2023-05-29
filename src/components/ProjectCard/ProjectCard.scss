@@ -24,7 +24,7 @@
 
         & .card-background  {
             border-bottom-width: 8px;
-            filter: blur(0);
+            filter: grayscale(0);
         }
 
         & .card-title {
@@ -74,8 +74,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(1px);
-    transition: border-bottom-width .4s, filter .4s;
+    filter: grayscale(.6);
+    transition: border-bottom-width .4s, filter .6s;
 }
 
 .card-description {
