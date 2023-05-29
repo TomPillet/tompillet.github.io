@@ -43,12 +43,39 @@ p {
   border-radius: 4px;
   color: var(--third-content-color);
   width: fit-content;
+
+  &.action {
+    display: block;
+    margin: auto;
+    background-color: var(--second-bg-color);
+    transition: all .3s;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--main-content-color);
+      transition: all .3s;
+    }
+
+    & svg {
+      margin-left: 4px;
+    }
+  }
 }
 
 .content {
   animation-duration: 1s;
   animation-name: slideIn;
   margin-top: 24px;
+}
+
+.dynamic-underline:after {
+  content: '';
+  position: relative;
+  display: block;
+  height: 1px;
+  width: 0px;
+  background-color: var(--main-orange-color);
+  transition: all .4s;
 }
 
 .photo-container {
@@ -68,16 +95,6 @@ p {
       display: inline-block;
       font-weight: bold;
       transition: all .4s;
-
-      &:after {
-        content: '';
-        position: relative;
-        display: block;
-        height: 1px;
-        width: 0px;
-        background-color: var(--main-orange-color);
-        transition: all .4s;
-      }
     }
   }
 }
@@ -100,8 +117,8 @@ p {
     transition: all .8s;
   }
 
-  &:hover + #photoHeadings span:after {
-    width: 32px;
+  &:hover + #photoHeadings .dynamic-underline:after {
+    width: 36px;
     transition: all .4s;
   }
 }
@@ -130,23 +147,6 @@ p {
   margin: auto;
   padding-top: 40px;
   width: 80vw;
-
-  & .button {
-    display: block;
-    margin: auto;
-    background-color: var(--second-bg-color);
-    transition: all .3s;
-
-    &:hover {
-      cursor: pointer;
-      color: var(--main-content-color);
-      transition: all .3s;
-    }
-
-    & .icon {
-      margin-left: 4px;
-    }
-  }
 }
 
 .presentation-keywords {
@@ -176,4 +176,34 @@ p {
   &:hover {
     transition: all .3s;
   }
+}
+
+.projects-wrapper {
+  height: 760px;
+  margin-top: 240px;
+  padding-top: 120px;
+  background-color: white;
+  border: 48px solid var(--main-content-color);
+  border-left: none;
+  border-right: none;
+  transform: skewY(-10deg);
+}
+.projects-title {
+  color: var(--main-orange-color);
+  margin-bottom: 16px;
+  line-height: .7em;
+  text-align: center;
+  text-shadow: 1px 1px 0px var(--second-orange-color),
+                2px 2px 0px var(--third-orange-color);
+  text-transform: uppercase;
+  transform: skewX(-10deg);
+}
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  width: min-content;
+  margin: auto;
+}
+.projects-title, .projects-container {
+  transform: skewY(10deg);
 }

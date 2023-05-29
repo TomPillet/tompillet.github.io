@@ -8,14 +8,15 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import AppHeader from './components/AppHeader/AppHeader';
 import DragSlider from './components/DragSlider/DragSlider';
+import Card from './components/Card/Card';
 
 import photoCV from './medias/photocv_profil.jpg';
 
-import competencesUrls from './competences-urls.json';
-
+import competencesUrls from './json/competences-urls.json';
 
 const App = () => {
   let { t }= useTranslation();
+  let projectsJSON: Array<any> = require("./json/projects/"+i18next.language+"/projects.json");
 
   return (
     <div className="App">
@@ -25,7 +26,7 @@ const App = () => {
         <div className="wrapper presentation-wrapper">
           <div className='photo-container'>
             <img id="photoCV" src={photoCV} alt="Tom PILLET" />
-            <p id="photoHeadings">{t("hi_im")} <span>Tom</span></p>
+            <p id="photoHeadings">{t("hi_im")} <span className='dynamic-underline'>Tom</span></p>
           </div>
 
           <div className='presentation-container'>
@@ -47,6 +48,19 @@ const App = () => {
             <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
           </div>
           <div className="wrapper-footer"></div>
+        </div>
+
+        <div className="wrapper projects-wrapper">
+          <h3 className='projects-title'>Mes projets persos</h3>
+          <div className="projects-container">
+            {
+              projectsJSON.map(project => {
+                return (
+                  <Card key={project.id} cardData={project}></Card>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </div>

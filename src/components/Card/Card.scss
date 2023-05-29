@@ -1,0 +1,68 @@
+.card-inner {
+    display: block;
+    height: 520px; width: 320px;
+    margin: 16px; padding: 16px;
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 8px;
+    color: var(--main-content-color);
+    box-shadow: 2px 2px 4px black;
+
+    &:hover {
+        .card-background  {
+            border-width: 8px;
+            filter: blur(0);
+            transition: border-width .4s, filter .4s;
+        }
+
+        .card-title .dynamic-underline:after {
+            width: 92%;
+            transition: width .4s;
+        }
+    }
+}
+
+.card-header {
+    display: block;
+    height: 36%;
+    margin-bottom: 36px;
+}
+
+.card-title {
+    position: relative;
+    top: -40px;
+    margin-left: 16px;
+    transform: skewX(-10deg);
+
+    & .dynamic-underline:after {
+        height: 2px;
+    }
+}
+
+.card-background {
+    box-sizing: border-box;
+    height: 100%;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    transition: border-width .4s, filter .4s;
+}
+
+.card-description {
+    height: 36%; width: 80%;
+    margin: auto;
+    letter-spacing: .1em;
+    line-height: 1.6em;
+    text-align: justify;
+    // text-indent: 1.6em;
+}
+
+.action svg {
+    font-size: 1.2em;
+    position: relative;
+    top: 2px;
+}
