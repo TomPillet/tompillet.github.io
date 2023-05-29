@@ -1,10 +1,27 @@
+@keyframes verticalFloatingAnimation {
+    from, to {
+        top: 8px;
+    }
+    50% {
+        top: -8px;
+    }
+}
+
 .card-inner {
     display: block;
     height: 520px; width: 320px;
     margin: 32px; 
     color: var(--main-content-color);
 
+    position: relative;
+    animation: 2s ease-in-out 0s infinite verticalFloatingAnimation;
+    transform: scale(.9);
+    transition: transform .4s;
+
     &:hover {
+        animation-play-state: paused;
+        transform: scale(1);
+
         & .card-background  {
             border-bottom-width: 8px;
             filter: blur(0);
@@ -57,7 +74,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(2px);
+    filter: blur(1px);
     transition: border-bottom-width .4s, filter .4s;
 }
 
