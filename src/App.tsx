@@ -16,7 +16,7 @@ import competencesUrls from './json/competences-urls.json';
 
 const App = () => {
   let { t }= useTranslation();
-  let projectsList = require("./json/projects/"+i18next.language+"/projects.json");
+  let projectsList = require("./json/projects/"+i18next.language.substring(0,2)+"/projects.json");
   let projectsResources = require("./json/projects/projects-resources.json");
 
   return (
