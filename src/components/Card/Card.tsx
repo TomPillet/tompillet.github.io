@@ -16,7 +16,7 @@ const Card: FC<CardProps> = ({cardData}) => {
     <Color src={require('../../'+cardData.background)} format='hex'>
       {({ data, loading, error }) => (
         <div id={cardData.id} className="card-inner">
-          <div className="card-content">
+          <div className="card-content" style={{boxShadow: '8px 8px 0px '+data}}>
             <div className="card-header">
               <img className='card-background' src={require('../../'+cardData.background)}
                   alt={cardData.title} style={{borderColor: data}} />
