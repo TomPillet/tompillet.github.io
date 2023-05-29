@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Color from 'color-thief-react';
+import { useTranslation } from 'react-i18next';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/fontawesome-free-brands';
@@ -17,8 +18,9 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({projectId, projectBackgroundImage, projectDescription, projectLinks, projectTitle}) => {
+  let { t }= useTranslation();
+
   return (
-    
     <Color src={require('../../'+projectBackgroundImage)} format='hex'>
       {({ data, loading, error }) => (
 
@@ -43,7 +45,7 @@ const ProjectCard: FC<ProjectCardProps> = ({projectId, projectBackgroundImage, p
               </a>
               <a  className={`button action ${(projectLinks.repo.length === 0) ? 'no-display' : ''}`}
                 href={projectLinks.repo} target='blank'>
-                Voir le repo <FontAwesomeIcon icon={faGithub as IconProp}></FontAwesomeIcon>
+                { t('see_repo') } <FontAwesomeIcon icon={faGithub as IconProp}></FontAwesomeIcon>
               </a>
             </div>
           </div>

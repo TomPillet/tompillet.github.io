@@ -52,7 +52,7 @@ const App = () => {
         </div>
 
         <div className="wrapper projects-wrapper">
-          <h3 className='projects-title'>Mes projets persos</h3>
+          <h3 className='projects-title'>{ t('my_projects') }</h3>
           <div className="projects-container">
             {
               projectsList.map((project: any) => {
