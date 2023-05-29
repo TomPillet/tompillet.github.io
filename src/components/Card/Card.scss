@@ -9,15 +9,17 @@
     box-shadow: 2px 2px 4px black;
 
     &:hover {
-        .card-background  {
+        & .card-background  {
             border-width: 8px;
             filter: blur(0);
-            transition: border-width .4s, filter .4s;
         }
 
-        .card-title .dynamic-underline:after {
-            width: 92%;
-            transition: width .4s;
+        & .card-title {
+            top: -48px;
+            
+            & .dynamic-underline:after {
+                width: 84%;
+            }
         }
     }
 }
@@ -31,8 +33,9 @@
 .card-title {
     position: relative;
     top: -40px;
-    margin-left: 16px;
+    margin-left: 24px;
     transform: skewX(-10deg);
+    transition: top .4s;
 
     & .dynamic-underline:after {
         height: 2px;
