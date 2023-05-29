@@ -12,7 +12,7 @@ interface AppHeaderProps {}
 const AppHeader: FC<AppHeaderProps> = () => (
   <header className='header'>
     <nav className='navbar'>
-      <div className="languages-dropdown">
+      <div className="languages-dropdown navbar-items">
         <div className="languages-dropdown-trigger">
           <FontAwesomeIcon className="languages-icon" icon={faGlobe}></FontAwesomeIcon>
         </div>
@@ -32,9 +32,9 @@ const AppHeader: FC<AppHeaderProps> = () => (
         </div>
       </div>
 
-      <h6 className="title">Tom Pillet</h6>
+      <h6 className="title navbar-items">Tom Pillet</h6>
       
-      <div className="links">
+      <div className="links navbar-items">
         <ul className='links-list'>
           <li className="link-item">
             <a id="github" className='link' target='blank' href="https://github.com/TomPillet">Github</a>

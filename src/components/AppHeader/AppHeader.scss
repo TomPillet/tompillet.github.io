@@ -8,6 +8,10 @@
     color: var(--main-content-color) !important;
 }
 
+.navbar-items {
+  flex: 1;
+}
+
 .navbar-neon {
   position: absolute;
   height: 1px;
@@ -122,11 +126,13 @@
 
 .title {
   font-weight: 600;
+  text-align: center;
 }
 
 .links-list {
   display: flex;
   flex-direction: row;
+  justify-content: end;
   margin: 0;
 }
 
