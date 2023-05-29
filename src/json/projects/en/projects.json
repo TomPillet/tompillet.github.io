@@ -2,22 +2,16 @@
     {
         "id": "aoc",
         "title": "Advent of Code 2022",
-        "description": "",
-        "background": "medias/projects/aoc.jpg",
-        "linkto": ""
+        "description": "Advent of Code is a serie of algorithm challenges that take place each year on December."
     },
     {
         "id": "pew",
         "title": "Pew Pew",
-        "description": "",
-        "background": "medias/projects/starship-bg.jpg",
-        "linkto": ""
+        "description": "Little game mixing shoot'em up and online PvP, inspired by Agar.io, where you control an armed spaceship."
     },
     {
         "id": "rpg",
-        "title": "Godot RPG",
-        "description": "",
-        "background": "medias/projects/godot_rpg.jpg",
-        "linkto": ""
+        "title": "RPG Godot",
+        "description": "Little RPG made on the Godot game engine using community graphic assets, and builded for the web."
     }
 ]

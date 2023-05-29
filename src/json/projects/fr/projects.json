@@ -2,22 +2,16 @@
     {
         "id": "aoc",
         "title": "Advent of Code 2022",
-        "description": "Advent of Code est une série de défis d'algorithmes qui a lieu chaque année à la période de Noël. N'hésitez pas à suivre ma progression sur l'édition de 2022.",
-        "background": "medias/projects/aoc.jpg",
-        "linkto": "https://github.com/TomPillet/AoC_2022"
+        "description": "Advent of Code est une série de défis d'algorithmes qui a lieu chaque année en décembre."
     },
     {
         "id": "pew",
         "title": "Pew Pew",
-        "description": "Jeu shoot 'em up en ligne, inspiré de Agar.io, le but y est d'accumuler le plus de points possible pour s'élever dans le scoreboard.",
-        "background": "medias/projects/starship-bg.jpg",
-        "linkto": "#"
+        "description": "Jeu mêlant shoot'em up et PvP en ligne, inspiré de Agar.io, où l'on contrôle un vaisseau spatial armé."
     },
     {
         "id": "rpg",
         "title": "RPG Godot",
-        "description": "Micro RPG réalisé lors de ma découverte de Godot, via des ressources en ligne. Faites un clic gauche dans le navigateur pour jouer une fois le chargement terminé.",
-        "background": "medias/projects/godot_rpg.jpg",
-        "linkto": "https://tampoulet.github.io"
+        "description": "Micro RPG réalisé sur le moteur de jeu Godot à l'aide de ressources graphiques communautaires, et exporté pour le web."
     }
 ]

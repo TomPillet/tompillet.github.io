@@ -1,0 +1,26 @@
+[
+    {
+        "project_id": "aoc",
+        "background": "medias/projects/aoc.jpg",
+        "links": {
+            "demo": "",
+            "repo": "https://github.com/TomPillet/AoC_2022"
+        }
+    },
+    {
+        "project_id": "pew",
+        "background": "medias/projects/starship-bg.jpg",
+        "links": {
+            "demo": "",
+            "repo": ""
+        }
+    },
+    {
+        "project_id": "rpg",
+        "background": "medias/projects/godot_rpg.jpg",
+        "links": {
+            "demo": "https://tampoulet.github.io",
+            "repo": "https://github.com/TomPillet/tampoulet.github.io"
+        }
+    }
+]
