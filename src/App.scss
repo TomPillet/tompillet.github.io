@@ -191,6 +191,7 @@ p {
   border: 48px solid var(--main-content-color);
   border-left: none;
   border-right: none;
+  box-shadow: 0px 0px 0px 24px var(--second-bg-color);
   transform: skewY(-10deg);
 }
 .projects-title {
