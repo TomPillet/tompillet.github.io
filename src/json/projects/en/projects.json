@@ -1,0 +1,20 @@
+[
+    {
+        "id": "aoc",
+        "title": "Advent of Code 2022",
+        "desc": "",
+        "background": "medias/projects/aoc.jpg"
+    },
+    {
+        "id": "pew",
+        "title": "Pew Pew",
+        "desc": "",
+        "background": "medias/projects/starship-bg.jpg"
+    },
+    {
+        "id": "rpg",
+        "title": "Godot RPG",
+        "desc": "",
+        "background": "medias/projects/godot_rpg.jpg"
+    }
+]
