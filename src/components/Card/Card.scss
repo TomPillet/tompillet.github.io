@@ -72,6 +72,11 @@
     text-indent: 1.6em;
 }
 
+.card-links {
+    display: flex;
+    flex-direction: row;
+}
+
 .action svg {
     font-size: 1.2em;
     position: relative;

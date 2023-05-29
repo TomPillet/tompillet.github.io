@@ -3,9 +3,10 @@ import Color from 'color-thief-react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/fontawesome-free-brands';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import './Card.scss';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface CardProps {
   cardData: any
@@ -29,9 +30,16 @@ const Card: FC<CardProps> = ({cardData}) => {
               {cardData.description}
             </div>
 
-            <a className='button action' href={cardData.linkto} target='blank'>
-              Voir le repo <FontAwesomeIcon icon={faGithub as IconProp}></FontAwesomeIcon>
-            </a>
+            <div className="card-links">
+              <a className={`button action ${(cardData.links.demo.length === 0) ? 'no-display' : ''}`}
+                href={cardData.links.demo} target='blank'>
+                <FontAwesomeIcon icon={faPlay}></FontAwesomeIcon>
+              </a>
+              <a  className={`button action ${(cardData.links.repo.length === 0) ? 'no-display' : ''}`}
+                href={cardData.links.repo} target='blank'>
+                Voir le repo <FontAwesomeIcon icon={faGithub as IconProp}></FontAwesomeIcon>
+              </a>
+            </div>
           </div>
         </div>
       )}
