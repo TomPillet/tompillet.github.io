@@ -199,8 +199,8 @@ p {
   letter-spacing: .2em;
   line-height: .7em;
   text-align: center;
-  text-shadow: 1px 1px 0px var(--second-orange-color),
-                2px 2px 0px var(--third-orange-color);
+  text-shadow: 1px 2px 0px var(--second-orange-color),
+                2px 4px 0px var(--third-orange-color);
   text-transform: uppercase;
   transform: skewX(-10deg);
 }
