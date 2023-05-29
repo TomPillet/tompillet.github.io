@@ -8,7 +8,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import AppHeader from './components/AppHeader/AppHeader';
 import DragSlider from './components/DragSlider/DragSlider';
-import Card from './components/Card/Card';
+import ProjectCard from './components/ProjectCard/ProjectCard';
 
 import photoCV from './medias/photocv_profil.jpg';
 
@@ -16,7 +16,8 @@ import competencesUrls from './json/competences-urls.json';
 
 const App = () => {
   let { t }= useTranslation();
-  let projectsJSON: Array<any> = require("./json/projects/"+i18next.language+"/projects.json");
+  let projectsList = require("./json/projects/"+i18next.language+"/projects.json");
+  let projectsResources = require("./json/projects/projects-resources.json");
 
   return (
     <div className="App">
@@ -54,9 +55,16 @@ const App = () => {
           <h3 className='projects-title'>Mes projets persos</h3>
           <div className="projects-container">
             {
-              projectsJSON.map(project => {
+              projectsList.map((project: any) => {
+                const resources = projectsResources.find((resource: any) => resource.project_id === project.id);
+
                 return (
-                  <Card key={project.id} cardData={project}></Card>
+                  <ProjectCard key={project.id} projectId={project.id}
+                    projectBackgroundImage={resources.background}
+                    projectDescription={project.description}
+                    projectTitle={project.title}
+                    projectLinks={resources.links}
+                  />
                 )
               })
             }
