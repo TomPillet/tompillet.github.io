@@ -39,11 +39,11 @@ const ProjectCard: FC<ProjectCardProps> = ({projectId, projectBackgroundImage, p
             </div>
 
             <div className="card-links">
-              <a className={`button action ${(projectLinks.demo.length === 0) ? 'no-display' : ''}`}
+              <a id="demoLink" className={`button action ${(projectLinks.demo.length === 0) ? 'no-display' : ''}`}
                 href={projectLinks.demo} target='blank'>
                 <FontAwesomeIcon icon={faPlay}></FontAwesomeIcon>
               </a>
-              <a  className={`button action ${(projectLinks.repo.length === 0) ? 'no-display' : ''}`}
+              <a id="repoLink" className={`button action ${(projectLinks.repo.length === 0) ? 'no-display' : ''}`}
                 href={projectLinks.repo} target='blank'>
                 { t('see_repo') } <FontAwesomeIcon icon={faGithub as IconProp}></FontAwesomeIcon>
               </a>

@@ -68,7 +68,6 @@
     font-size: 1em;
     letter-spacing: .1em;
     line-height: 1.6em;
-    text-align: justify;
     text-indent: 1.6em;
 }
 
@@ -77,8 +76,15 @@
     flex-direction: row;
 }
 
-.action svg {
-    font-size: 1.2em;
-    position: relative;
-    top: 2px;
+.action {
+    &#demoLink svg {
+        margin-left: 0px;
+    }
+
+    & svg {
+        font-size: 1.2em;
+        position: relative;
+        top: 2px;
+    }
+    
 }
