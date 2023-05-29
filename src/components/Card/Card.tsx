@@ -17,12 +17,8 @@ const Card: FC<CardProps> = ({cardData}) => {
       {({ data, loading, error }) => (
         <div id={cardData.id} className="card-inner">
           <div className="card-header">
-            <div className='card-background'
-                style={{
-                  backgroundImage: `url(${require('../../'+cardData.background)})`,
-                  borderColor: data
-                }}>
-            </div>
+            <img className='card-background' src={require('../../'+cardData.background)}
+                alt={cardData.title} style={{borderColor: data}} />
             <h5 className="card-title" style={{textShadow: `2px 2px 0px `+data}}>
               <span className='dynamic-underline'>{cardData.title}</span>
             </h5>
