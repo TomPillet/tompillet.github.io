@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Color, { useColor } from 'color-thief-react';
+import Color from 'color-thief-react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/fontawesome-free-brands';
