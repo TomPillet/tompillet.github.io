@@ -1,12 +1,8 @@
 .card-inner {
     display: block;
-    height: 520px; width: 320px;
-    margin: 16px; padding: 16px;
-    background-color: var(--second-bg-color);
-    border: 1px solid var(--main-border-color);
-    border-radius: 8px;
+    height: 480px; width: 320px;
+    margin: 32px; 
     color: var(--main-content-color);
-    box-shadow: 2px 2px 4px black;
 
     &:hover {
         & .card-background  {
@@ -24,9 +20,19 @@
     }
 }
 
+.card-content {
+    display: block;
+    height: 100%; width: 100%;
+    padding: 16px;
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+}
+
 .card-header {
     display: block;
-    height: 36%;
+    height: 40%;
     margin-bottom: 36px;
 }
 
@@ -60,6 +66,7 @@
 .card-description {
     height: 36%; width: 80%;
     margin: auto;
+    margin-bottom: 16px;
     letter-spacing: .1em;
     line-height: 1.6em;
     text-align: justify;
