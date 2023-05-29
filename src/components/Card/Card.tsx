@@ -31,7 +31,7 @@ const Card: FC<CardProps> = ({cardData}) => (
           {cardData.description}
         </div>
 
-        <a id="downloadCV" className='button action' href={cardData.linkto}>
+        <a className='button action' href={cardData.linkto} target='blank'>
           Voir le repo <FontAwesomeIcon icon={faGithub as IconProp}></FontAwesomeIcon>
         </a>
       </div>
