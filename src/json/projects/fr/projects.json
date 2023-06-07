@@ -5,9 +5,9 @@
         "description": "Advent of Code est une série de défis d'algorithmes qui a lieu chaque année en décembre."
     },
     {
-        "id": "pew",
-        "title": "Pew Pew",
-        "description": "Jeu mêlant shoot'em up et PvP en ligne, inspiré de Agar.io, où l'on contrôle un vaisseau spatial armé."
+        "id": "map",
+        "title": "Infra's map",
+        "description": "Application React où l'on peut inscrire les coordonnées GPS d'une infrastructure sur une carte."
     },
     {
         "id": "rpg",

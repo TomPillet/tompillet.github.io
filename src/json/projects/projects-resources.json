@@ -8,12 +8,13 @@
         }
     },
     {
-        "project_id": "pew",
-        "background": "medias/projects/starship-bg.jpg",
+        "project_id": "map",
+        "background": "medias/projects/map.jpg",
         "links": {
             "demo": "",
-            "repo": "https://github.com/TomPillet/PewPew"
-        }
+            "repo": "https://github.com/TomPillet/infras-map"
+        },
+        "title_custom_color": "#131313"
     },
     {
         "project_id": "rpg",

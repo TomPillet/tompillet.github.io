@@ -63,6 +63,7 @@ const App = () => {
                     projectBackgroundImage={resources.background}
                     projectDescription={project.description}
                     projectTitle={project.title}
+                    projectTitleCustomColor={(resources.title_custom_color)? resources.title_custom_color : null}
                     projectLinks={resources.links}
                   />
                 )

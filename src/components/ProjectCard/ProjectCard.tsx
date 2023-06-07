@@ -15,9 +15,10 @@ interface ProjectCardProps {
   projectDescription: string,
   projectLinks: any
   projectTitle: string,
+  projectTitleCustomColor: string | null;
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({projectId, projectBackgroundImage, projectDescription, projectLinks, projectTitle}) => {
+const ProjectCard: FC<ProjectCardProps> = ({projectId, projectBackgroundImage, projectDescription, projectLinks, projectTitle, projectTitleCustomColor}) => {
   let { t }= useTranslation();
 
   return (
@@ -29,7 +30,7 @@ const ProjectCard: FC<ProjectCardProps> = ({projectId, projectBackgroundImage, p
 
             <div className="card-header">
               <img className='card-background' src={require('../../'+projectBackgroundImage)} alt={projectTitle} style={{borderColor: data}} />
-              <h5 className="card-title" style={{textShadow: `2px 2px 0px `+data}}>
+              <h5 className="card-title" style={{textShadow: `2px 2px 0px `+data, color: (projectTitleCustomColor != null) ? projectTitleCustomColor : ''}}>
                 <span className='dynamic-underline'>{projectTitle}</span>
               </h5>
             </div>
