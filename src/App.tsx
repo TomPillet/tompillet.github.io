@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faCakeCandles } from '@fortawesome/free-solid-svg-icons';
 
 import AppHeader from './components/AppHeader/AppHeader';
 import DragSlider from './components/DragSlider/DragSlider';
@@ -26,7 +26,15 @@ const App = () => {
       <div className='content'>
         <div className="wrapper presentation-wrapper">
           <div className='wrapper-content'>
-            <img id="photoCV" src={photoCV} alt="Tom PILLET" />
+            <div className='photo-cv-container'>
+              <div className="anniversary-trigger">
+                <span><FontAwesomeIcon className='icon' icon={faCakeCandles}/></span>
+              </div>
+              <div className='anniversary-text'>
+                <p>Mon anniversaire est le 13 novembre de chaque année. J'ai aujourd'hui 22 ans.</p>
+              </div>
+              <img id="photoCV" src={photoCV} alt="Tom PILLET"/>
+            </div>
 
             <div className='presentation-container'>
               <h1 className='presentation-title'>Tom PILLET</h1>

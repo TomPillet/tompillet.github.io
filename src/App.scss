@@ -29,9 +29,6 @@ a {
   }
 }
 
-p {
-  color: var(--main-content-color);
-}
 
 .button {
   padding: 12px 24px;
@@ -98,26 +95,77 @@ p {
 }
 .wrapper-content {
   display: flex;
+  justify-content: space-between;
 }
 
 .presentation-wrapper {
   margin-top: 0;
 }
 
-#photoCV {
+.photo-cv-container {
   height: 240px;
-  min-width: 240px;
+  width: 240px;;
+  position: relative;
+  display: block;
+
+  &:has(.anniversary-trigger:hover) .anniversary-text {
+    opacity: .96;
+  }
+}
+.anniversary-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-content-color);
+  border: 2px solid var(--main-content-color);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 220px;
+  z-index: 1000;
+  transition: all .3s;
+
+  &:hover {
+    background-color: var(--second-bg-color);
+    color: var(--main-content-color);
+    border: 2px solid var(--second-content-color);
+  }
+}
+.anniversary-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 2px;
+  position: absolute;
+  opacity: 0;
+  border-radius: 100%;
+  background-color: var(--second-bg-color);
+  transition: all .3s;
+
+  & p {
+    width: 60%;
+    text-align: center;
+    font-weight: 200;
+    margin: auto;
+    color: var(--main-content-color)
+  }
+}
+#photoCV {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: 20% 20%;
-  border: 2px solid rgb(207, 207, 207);
+  border: 2px solid var(--second-content-color);
   border-radius: 100%;
-  box-sizing: border-box;
+  box-sizing: content-box;
   box-shadow: black 0px 0px 4px;
 }
 
 .presentation-container {
-  width: 100%;
-  margin-left: 32px;
+  width: 72%;
 }
 .presentation-title {
   font-family: 'Merienda', cursive;
