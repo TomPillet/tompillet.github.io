@@ -41,7 +41,7 @@ p {
   background-color: var(--main-bg-color);
   border: solid 1px var(--main-border-color);
   border-radius: 4px;
-  color: var(--third-content-color);
+  color: var(--main-content-color);
   width: fit-content;
 
   &.action {
@@ -52,8 +52,7 @@ p {
 
     &:hover {
       cursor: pointer;
-      color: var(--main-content-color);
-      transition: all .3s;
+      scale: 108%;
     }
 
     & svg {
@@ -107,24 +106,10 @@ p {
   width: 100%;
   object-fit: cover;
   object-position: left top;
-  // border: 4px solid white;
+  border: 2px solid rgb(207, 207, 207);
   border-radius: 100%;
   box-sizing: border-box;
   box-shadow: black 0px 0px 4px;
-  filter: grayscale(90%) contrast(100%);
-  transform: scale(90%);
-  transition: all .8s;
-
-  &:hover {
-    transform: scale(100%);
-    filter: grayscale(10%);
-    transition: all .3s;
-  }
-
-  &:hover + #photoHeadings .dynamic-underline:after {
-    width: 105%;
-    transition: all .3s;
-  }
 }
 
 .wrapper {

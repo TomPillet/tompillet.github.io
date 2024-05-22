@@ -41,7 +41,7 @@ const App = () => {
           </a>
         </div>
 
-        <div className="wrapper">
+        {/* <div className="wrapper techno-wrapper">
           <div className="wrapper-header">
             <h3>{t("tech_skills")}</h3>
           </div>
@@ -70,7 +70,7 @@ const App = () => {
               })
             }
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
