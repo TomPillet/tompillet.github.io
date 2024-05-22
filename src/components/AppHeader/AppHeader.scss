@@ -4,21 +4,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 32px 0px;
-    margin: 0px 16vw;
+    margin: 0px 4%;
     color: var(--main-content-color) !important;
 }
 
 .navbar-items {
   flex: 1;
-}
-
-.navbar-neon {
-  position: absolute;
-  height: 1px;
-  width: 72vw;
-  top: 80px;
-  left: 14vw;
-  background-color: var(--second-content-color);
 }
 
 .languages-dropdown {

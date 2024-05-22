@@ -2,9 +2,9 @@
     "download": {
       "my_cv": "Télécharger mon CV"
     },
-    "welcome_msg": "Salut, moi c'est",
     "my_projects": "Mes projets personnels",
-    "presentation": "Développeur fullstack ambitieux & motivé",
+    "presentation_text": "Développeur fullstack",
+    "presentation_keywords": "Ambitieux & motivé",
     "see_repo": "Voir le repo",
     "tech_skills": "Compétences techniques"
 }

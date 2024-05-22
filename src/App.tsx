@@ -25,20 +25,18 @@ const App = () => {
 
       <div className='content'>
         <div className="wrapper presentation-wrapper">
-          <div className='photo-container'>
+          <div className='wrapper-content'>
             <img id="photoCV" src={photoCV} alt="Tom PILLET" />
-            <p id="photoHeadings">{t("welcome_msg")} <span className='dynamic-underline'>Tom</span></p>
-          </div>
 
-          <div className='presentation-container'>
-            <p className="presentation-keywords">
-              {t("presentation")}
-            </p>
-          </div>
+            <div className='presentation-container'>
+              <h1 className='presentation-title'>Tom PILLET</h1>
+              <p className="presentation-text">{t("presentation_text")}</p>
+            </div>
 
-          <a id="downloadCV" className='button action' href={"CV_TomPILLET-"+i18next.language+".pdf"} download>
-            {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
-          </a>
+            {/* <a id="downloadCV" className='button action' href={"CV_TomPILLET-"+i18next.language+".pdf"} download>
+              {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
+            </a> */}
+          </div>
         </div>
 
         {/* <div className="wrapper techno-wrapper">

@@ -2,9 +2,9 @@
     "download": {
       "my_cv": "Download my CV"
     },
-    "welcome_msg": "Hi, my name is",
-    "presentation": "Fullstack developer ambitious & motivated",
     "my_projects": "My personal projects",
+    "presentation_text": "Fullstack developer",
+    "presentation_keywords": "Ambitious & motivated",
     "see_repo": "See the repo",
     "tech_skills": "Technical skills"
   }

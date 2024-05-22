@@ -8,17 +8,14 @@
 body {
   overflow-x: hidden;
   background-color: var(--main-bg-color);
+  max-width: 80rem;
+  margin: auto;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-h1 { font-size: 2.8em; }
-h2 { font-size: 2.4em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.7em; }
-h5 { font-size: 1.4em; }
-h6 { font-size: 1.1em; }
 
 ol, ul, li {
   list-style: none;
@@ -54,17 +51,11 @@ p {
       cursor: pointer;
       scale: 108%;
     }
-
+    
     & svg {
       margin-left: 4px;
     }
   }
-}
-
-.content {
-  animation-duration: 1s;
-  animation-name: slideIn;
-  margin-top: 24px;
 }
 
 .dynamic-underline:after {
@@ -81,78 +72,77 @@ p {
   display: none !important;
 }
 
-.photo-container {
-  height: 180px;
-  width: 180px;
-  margin: auto;
-  padding: 40px 0px;
+.content {
+  animation-duration: 1s;
+  animation-name: slideIn;
+  margin-top: 24px;
+}
 
-  & #photoHeadings {
-    display: block;
-    margin-top: 8px;
-    text-align: center;
-    font-weight: 400;
-    transition: all 1s;
+.wrapper {
+  margin: 160px 80px;
+  display: block;
+}
+.wrapper-header, .wrapper-footer {
+  padding: 24px 0px;
+  background-color: var(--second-bg-color);
 
-    & span {
-      display: inline-block;
-      font-weight: bold;
-      transition: all .4s;
-    }
+  & h3 {
+    width: fit-content;
+    margin: auto;
+    color: var(--main-content-color);
+    font-size: 1.6em;
+    letter-spacing: .4em;
+    transform: skewX(-10deg);
+    text-transform: uppercase;
   }
 }
+.wrapper-content {
+  display: flex;
+}
+
+.presentation-wrapper {
+  margin-top: 0;
+}
+
 #photoCV {
-  height: 100%;
-  width: 100%;
+  height: 240px;
+  min-width: 240px;
   object-fit: cover;
-  object-position: left top;
+  object-position: 20% 20%;
   border: 2px solid rgb(207, 207, 207);
   border-radius: 100%;
   box-sizing: border-box;
   box-shadow: black 0px 0px 4px;
 }
 
-.wrapper {
-  margin: 160px 0px;
-  display: block;
-
-  & .wrapper-header, & .wrapper-footer {
-    padding: 24px 0px;
-    background-color: var(--second-bg-color);
-
-    & h3 {
-      width: fit-content;
-      margin: auto;
-      color: var(--main-content-color);
-      font-size: 1.6em;
-      letter-spacing: .4em;
-      transform: skewX(-10deg);
-      text-transform: uppercase;
-    }
-  }
+.presentation-container {
+  width: 100%;
+  margin-left: 32px;
 }
-
-.presentation-wrapper {
-  margin: auto;
-  padding-top: 40px;
-  width: 80vw;
+.presentation-title {
+  font-family: 'Merienda', cursive;
+  font-weight: 900;
+  font-size: 5.6rem;
+  letter-spacing: .4rem;
+  line-height: 6rem;
+  text-align: end;
+  color: var(--main-content-color);
 }
-
-.presentation-keywords {
+.presentation-text {
   position: relative;
-  font-weight: bold;
-  font-size: 2.8em;
   margin: auto;
-  padding: 8px 0px 24px 0px;
-  max-width: 520px;
-  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: .4rem;
+  text-align: end;
   color: var(--second-content-color);
 
-  &:after {
-    content: "";
-    position: absolute; top: 0; bottom: 0; left: 0px; right: 0px;
-    // box-shadow: inset -64px 0px 80px var(--main-bg-color);
-  }
+  // Shadow from right to left hovering text
+  // &:after {
+  //   content: "";
+  //   position: absolute; top: 0; bottom: 0; left: 0px; right: 0px;
+  //   box-shadow: inset -64px 0px 80px var(--main-bg-color);
+  // }
 }
 
 .competences-wrapper {

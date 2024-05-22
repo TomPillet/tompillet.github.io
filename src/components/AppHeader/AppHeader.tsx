@@ -45,8 +45,6 @@ const AppHeader: FC<AppHeaderProps> = () => (
         </ul>
       </div>
     </nav>
-
-    <span className="navbar-neon"></span>
   </header>
 );
 
