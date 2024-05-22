@@ -27,7 +27,7 @@ const App = () => {
         <div className="wrapper presentation-wrapper">
           <div className='photo-container'>
             <img id="photoCV" src={photoCV} alt="Tom PILLET" />
-            <p id="photoHeadings">{t("hi_im")} <span className='dynamic-underline'>Tom</span></p>
+            <p id="photoHeadings">{t("welcome_msg")} <span className='dynamic-underline'>Tom</span></p>
           </div>
 
           <div className='presentation-container'>

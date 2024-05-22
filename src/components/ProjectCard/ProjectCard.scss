@@ -56,10 +56,6 @@
     margin-left: 24px;
     transform: skewX(-10deg);
     transition: top .4s;
-
-    & .dynamic-underline:after {
-        height: 2px;
-    }
 }
 
 .card-background {

@@ -2,9 +2,9 @@
     "download": {
       "my_cv": "Télécharger mon CV"
     },
-    "hi_im": "Salut, moi c'est",
+    "welcome_msg": "Salut, moi c'est",
     "my_projects": "Mes projets personnels",
-    "presentation": "Développeur junior, ambitieux et motivé",
+    "presentation": "Développeur web, ambitieux et motivé",
     "see_repo": "Voir le repo",
     "tech_skills": "Compétences techniques"
 }

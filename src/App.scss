@@ -72,7 +72,7 @@ p {
   content: '';
   position: relative;
   display: block;
-  height: 1px;
+  height: 2px;
   width: 0px;
   background-color: var(--main-orange-color);
   transition: all .4s;
@@ -118,12 +118,12 @@ p {
   &:hover {
     transform: scale(100%);
     filter: grayscale(10%);
-    transition: all .8s;
+    transition: all .3s;
   }
 
   &:hover + #photoHeadings .dynamic-underline:after {
-    width: 36px;
-    transition: all .4s;
+    width: 105%;
+    transition: all .3s;
   }
 }
 
