@@ -23,9 +23,10 @@ ol, ul, li {
 
 a {
   text-decoration: none;
+  transition: .4s all;
 
-  &.link:hover {
-    border-bottom: var(--main-content-color) 1px solid;
+  &:hover {
+    color: var(--orange-brule) !important;
   }
 }
 
@@ -76,14 +77,14 @@ a {
   left: -2px;
   bottom: 4px;
   z-index: -1;
-  transform: rotate(-1.2deg);
+  transform: rotate(-1.2deg) translateY(25%);
   background-color: var(--orange-brule);
+  opacity: .8;
 }
 
 .content {
   animation-duration: 1s;
   animation-name: slideIn;
-  margin-top: 24px;
 }
 
 .wrapper {
@@ -111,6 +112,28 @@ a {
 
 .presentation-wrapper {
   margin-top: 0;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: var(--main-content-color);
+    right: -48px;
+    top: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: var(--main-content-color);
+    top: -7px;
+    right: -54px;
+  }
 }
 
 .photo-cv-container {
@@ -181,6 +204,7 @@ a {
   justify-content: space-between;
   align-items: end;
   width: 72%;
+  padding: 8px 0px;
   letter-spacing: .4rem;
 }
 .presentation-title {
@@ -201,13 +225,15 @@ a {
   position: relative;
 }
 .presentation-situation {
-  font-size: 1.5rem;
-  letter-spacing: .3rem;
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
   color: var(--second-content-color);
 }
 .presentation-location {
   display: block;
-  color: var(--main-content-color);
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  color: var(--second-content-color);
 }
 
 .competences-wrapper {
