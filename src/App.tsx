@@ -85,7 +85,7 @@ const App = () => {
 
             <div className='presentation-container'>
               <h1 className='presentation-title'>Tom PILLET</h1>
-              <p className="presentation-text underline">{t("presentation_text")}</p>
+              <p className="presentation-text highlight">{t("presentation_text")}</p>
               <p className="presentation-situation">{t("presentation_situation")}</p>
               <span className="presentation-location"><FontAwesomeIcon className='icon' icon={faLocationDot}></FontAwesomeIcon> Besançon, France</span>
             </div>

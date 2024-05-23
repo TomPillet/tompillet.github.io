@@ -76,7 +76,7 @@
           transition: color .3s;  
 
           &.underline:after {
-            width: 20px;
+            width: 100%;
             background-color: var(--main-content-color);
             transition: all .3s;  
           }
