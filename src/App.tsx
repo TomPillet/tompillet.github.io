@@ -78,7 +78,7 @@ const App = () => {
                 <span><FontAwesomeIcon className='icon' icon={faCakeCandles}/></span>
               </div>
               <div className='birthday-text'>
-                <p>Prochain anniversaire dans <b>{birthdayDaysLeft}</b> jours, <b>{birthdayHoursLeft}</b> heures, <b>{birthdayMinutesLeft}</b> minutes et <b>{birthdaySecondsLeft}</b> secondes.</p>
+                <p>{t("next_birthday_in")} <b>{birthdayDaysLeft}</b> {t("words.days")}, <b>{birthdayHoursLeft}</b> {t("words.hours")}, <b>{birthdayMinutesLeft}</b> {t("words.minutes")} {t("words.and")} <b>{birthdaySecondsLeft}</b> {t("words.seconds")}.</p>
               </div>
               <img id="photoCV" src={photoCV} alt="Tom PILLET"/>
             </div>

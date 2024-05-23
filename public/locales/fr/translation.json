@@ -6,5 +6,13 @@
     "presentation_text": "Développeur web fullstack",
     "presentation_situation": "En recherche d'alternance",
     "see_repo": "Voir le repo",
-    "tech_skills": "Compétences techniques"
+    "tech_skills": "Compétences techniques",
+    "next_birthday_in": "Prochain anniversaire dans",
+    "words": {
+      "and": "et",
+      "days": "jours",
+      "hours": "heures",
+      "minutes": "minutes",
+      "seconds": "secondes"
+    }
 }

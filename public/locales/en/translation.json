@@ -6,5 +6,13 @@
     "presentation_text": "Fullstack web developer",
     "presentation_situation": "Applying as an apprentice",
     "see_repo": "See the repo",
-    "tech_skills": "Technical skills"
+    "tech_skills": "Technical skills",
+    "next_birthday_in": "Next birthday in",
+    "words": {
+      "and": "and",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    }
   }
