@@ -3,6 +3,7 @@ import './AppHeader.scss';
 import i18next, { changeLanguage } from 'i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import iconEN from '../../medias/flags/en-icon.svg';
 import iconFR from '../../medias/flags/fr-icon.svg';
@@ -30,17 +31,15 @@ const AppHeader: FC<AppHeaderProps> = () => (
             <span className={(i18next.language === "fr") ? "underline" : ""}>FR</span> 
           </button>
         </div>
-      </div>
-
-      <h6 className="title navbar-items">Tom Pillet</h6>
+      </div>  
       
       <div className="links navbar-items">
         <ul className='links-list'>
           <li className="link-item">
-            <a id="github" className='link' target='blank' href="https://github.com/TomPillet">Github</a>
+            <a id="github" className='link' target='blank' href="https://github.com/TomPillet"><FontAwesomeIcon className='icon' icon={faGithub}></FontAwesomeIcon></a>
           </li>
           <li className="link-item">
-            <a id="linkedin" className='link' target='blank' href="https://www.linkedin.com/in/tom-pillet/">Linkedin</a>
+            <a id="linkedin" className='link' target='blank' href="https://www.linkedin.com/in/tom-pillet/"><FontAwesomeIcon className='icon' icon={faLinkedinIn}></FontAwesomeIcon></a>
           </li>
         </ul>
       </div>

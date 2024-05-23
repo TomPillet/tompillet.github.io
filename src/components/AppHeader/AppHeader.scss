@@ -1,3 +1,7 @@
+.header {
+  margin-bottom: 48px;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -8,10 +12,6 @@
     color: var(--main-content-color) !important;
 }
 
-.navbar-items {
-  flex: 1;
-}
-
 .languages-dropdown {
   display: block;
   height: 24px;
@@ -20,6 +20,7 @@
   & .languages-dropdown-trigger {
     display: block;
     height: 100%;
+    width: fit-content;
     margin-left: 4px;
     padding-bottom: 16px;
     cursor: pointer;
@@ -128,16 +129,11 @@
 }
 
 .link-item {
-  margin-left: 12px;
-  font-size: .9em;
+  margin-left: 24px;
+  font-size: 2em;
   font-weight: 400;
-  
-  &:not(:last-child):after {
-    content: '/';
-    margin-left: 12px;
-  }
 
   & a {
-    color: var(--main-content-color);
+    color: var(--second-content-color);
   }
 }
