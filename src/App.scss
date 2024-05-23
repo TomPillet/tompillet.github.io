@@ -68,6 +68,17 @@ a {
 .no-display {
   display: none !important;
 }
+.underline:after {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  left: -2px;
+  bottom: 4px;
+  z-index: -1;
+  transform: rotate(-1.2deg);
+  background-color: var(--orange-brule);
+}
 
 .content {
   animation-duration: 1s;
@@ -108,11 +119,11 @@ a {
   position: relative;
   display: block;
 
-  &:has(.anniversary-trigger:hover) .anniversary-text {
+  &:has(.birthday-trigger:hover) .birthday-text {
     opacity: .96;
   }
 }
-.anniversary-trigger {
+.birthday-trigger {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +144,7 @@ a {
     border: 2px solid var(--second-content-color);
   }
 }
-.anniversary-text {
+.birthday-text {
   display: flex;
   align-items: center;
   height: 100%;
@@ -146,7 +157,7 @@ a {
   transition: all .3s;
 
   & p {
-    width: 60%;
+    width: 72%;
     text-align: center;
     font-weight: 200;
     margin: auto;
@@ -165,32 +176,38 @@ a {
 }
 
 .presentation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
   width: 72%;
+  letter-spacing: .4rem;
 }
 .presentation-title {
   font-family: 'Merienda', cursive;
   font-weight: 900;
   font-size: 5.6rem;
-  letter-spacing: .4rem;
   line-height: 6rem;
-  text-align: end;
+  color: var(--main-content-color);
+}
+.presentation-text, .presentation-situation {
+  margin: 0;
   color: var(--main-content-color);
 }
 .presentation-text {
-  position: relative;
-  margin: auto;
   font-weight: 400;
   font-size: 2rem;
-  letter-spacing: .4rem;
-  text-align: end;
+  letter-spacing: .3rem;
+  position: relative;
+}
+.presentation-situation {
+  font-size: 1.5rem;
+  letter-spacing: .3rem;
   color: var(--second-content-color);
-
-  // Shadow from right to left hovering text
-  // &:after {
-  //   content: "";
-  //   position: absolute; top: 0; bottom: 0; left: 0px; right: 0px;
-  //   box-shadow: inset -64px 0px 80px var(--main-bg-color);
-  // }
+}
+.presentation-location {
+  display: block;
+  color: var(--main-content-color);
 }
 
 .competences-wrapper {

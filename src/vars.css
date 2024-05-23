@@ -6,11 +6,18 @@
     --main-border-color: #323232;
     --second-border-color: #444;
 
-    --main-content-color: #f1f1f1;
+    --main-content-color: #fefefe;
     --second-content-color: #cfcfcf;
     --third-content-color: #888888;
 
     --main-orange-color: #F8B12E;
     --second-orange-color: #E5903B;
     --third-orange-color: #A87738;
+
+    --gris-anthracite: #34495E;
+    --bleu-fonce: #1F3A93;
+    --vert-emeraude: #2ECC71;
+    --rouge-bordeaux: #C0392B;
+    --orange-brule: #E67E22;
+    --pourpre: #8E44AD;
 }
