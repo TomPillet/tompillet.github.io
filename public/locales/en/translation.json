@@ -2,6 +2,13 @@
     "download": {
       "my_cv": "Download my CV"
     },
+    "sections": {
+      "about_me": "About me",
+      "technos": "Technologies",
+      "projects": "Projects",
+      "career": "Career",
+      "contact": "Contact"
+    },
     "my_projects": "My personal projects",
     "presentation_text": "Fullstack web developer",
     "presentation_situation": "Applying as an apprentice",

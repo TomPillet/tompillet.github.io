@@ -2,6 +2,13 @@
     "download": {
       "my_cv": "Télécharger mon CV"
     },
+    "sections": {
+      "about_me": "A propos de moi",
+      "technos": "Technologies",
+      "projects": "Projets",
+      "career": "Carrière",
+      "contact": "Contact"
+    },
     "my_projects": "Mes projets personnels",
     "presentation_text": "Développeur web fullstack",
     "presentation_situation": "En recherche d'alternance",
