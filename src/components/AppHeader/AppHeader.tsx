@@ -49,6 +49,9 @@ const AppHeader: FC<AppHeaderProps> = () => (
           <li className="quick-nav-item">
             <a href="" className="link">Carrière</a>
           </li>
+          <li className="quick-nav-item">
+            <a href="" className="link">Contact</a>
+          </li>
         </ul>
       </div>
 
