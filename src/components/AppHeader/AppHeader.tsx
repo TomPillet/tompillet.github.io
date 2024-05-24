@@ -3,7 +3,7 @@ import './AppHeader.scss';
 import i18next, { changeLanguage } from 'i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import iconEN from '../../medias/flags/en-icon.svg';
 import iconFR from '../../medias/flags/fr-icon.svg';
@@ -13,7 +13,7 @@ interface AppHeaderProps {}
 const AppHeader: FC<AppHeaderProps> = () => (
   <header className='header'>
     <nav className='navbar'>
-      <div className="languages-dropdown navbar-items">
+      <div className="languages-dropdown">
         <div className="languages-dropdown-trigger">
           <FontAwesomeIcon className="languages-icon" icon={faGlobe}></FontAwesomeIcon>
         </div>
@@ -33,8 +33,30 @@ const AppHeader: FC<AppHeaderProps> = () => (
         </div>
       </div>  
       
-      <div className="links navbar-items">
+      <div className="whitespace"></div>
+
+      <div className="quick-nav">
+        <ul className="quick-nav-list">
+          <li className="quick-nav-item">
+            <a href="" className="link">A propos de moi</a>
+          </li>
+          <li className="quick-nav-item">
+            <a href="" className="link">Technologies</a>
+          </li>
+          <li className="quick-nav-item">
+            <a href="" className="link">Projets</a>
+          </li>
+          <li className="quick-nav-item">
+            <a href="" className="link">Carrière</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="links">
         <ul className='links-list'>
+          <li className="link-item">
+            <a id="youtube" className='link' target='blank' href="https://www.youtube.com/channel/UC94k5Szf0xElT1bkgh_1oiw"><FontAwesomeIcon className='icon' icon={faYoutube}></FontAwesomeIcon></a>
+          </li>
           <li className="link-item">
             <a id="github" className='link' target='blank' href="https://github.com/TomPillet"><FontAwesomeIcon className='icon' icon={faGithub}></FontAwesomeIcon></a>
           </li>

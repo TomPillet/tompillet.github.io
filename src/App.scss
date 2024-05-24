@@ -1,8 +1,8 @@
 @import url(vars.css);
 
 @keyframes slideIn {
-  from { margin-left: -100%; }
-  to { margin-left: 0%; }
+  from { left: -100%;  }
+  to { left: 0%; }
 }
 
 body {
@@ -19,9 +19,12 @@ h1, h2, h3, h4, h5, h6 {
 
 ol, ul, li {
   list-style: none;
+  padding: 0;
 }
 
 a {
+  color: var(--main-content-color);
+  font-weight: 900;
   text-decoration: none;
   transition: .4s all;
 
@@ -29,7 +32,6 @@ a {
     color: var(--orange-brule) !important;
   }
 }
-
 
 .button {
   padding: 12px 24px;
@@ -83,12 +85,13 @@ a {
 }
 
 .content {
-  animation-duration: 1s;
+  position: relative;
+  animation-duration: .8s;
   animation-name: slideIn;
 }
 
 .wrapper {
-  margin: 160px 80px;
+  margin: 160px 100px;
   display: block;
 }
 .wrapper-header, .wrapper-footer {
@@ -112,28 +115,6 @@ a {
 
 .presentation-wrapper {
   margin-top: 0;
-  position: relative;
-
-  &:after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    background-color: var(--main-content-color);
-    right: -48px;
-    top: 0;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 14px;
-    width: 14px;
-    border-radius: 100%;
-    background-color: var(--main-content-color);
-    top: -7px;
-    right: -54px;
-  }
 }
 
 .photo-cv-container {
@@ -204,6 +185,7 @@ a {
   justify-content: space-between;
   align-items: end;
   width: 72%;
+  position: relative;
   padding: 8px 0px;
   letter-spacing: .4rem;
 }
