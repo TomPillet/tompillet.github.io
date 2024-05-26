@@ -36,10 +36,8 @@ const App = () => {
 
   useEffect(() => {
     let interval = setInterval(() => {
-      console.log('ok');
       if (birthdaySecondsLeft > 0) {
         setBirthdaySecondsLeft(birthdaySecondsLeft - 1);
-        console.log(birthdaySecondsLeft);
       } else if (birthdayMinutesLeft > 0) {
         setBirthdayMinutesLeft(birthdayMinutesLeft - 1);
         setBirthdaySecondsLeft(59);
