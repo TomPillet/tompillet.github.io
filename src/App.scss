@@ -190,7 +190,7 @@ a {
   letter-spacing: .4rem;
 }
 .presentation-title {
-  font-family: 'Merienda', cursive;
+  font-family: 'Merienda', sans-serif;
   font-weight: 900;
   font-size: 5.6rem;
   line-height: 6rem;
@@ -208,6 +208,7 @@ a {
 }
 .presentation-situation {
   font-size: 1.2rem;
+  font-style: italic;
   letter-spacing: .2rem;
   color: var(--second-content-color);
 }
