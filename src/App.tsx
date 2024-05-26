@@ -64,6 +64,13 @@ const App = () => {
   }, [birthdayDaysLeft, birthdayHoursLeft, birthdayMinutesLeft, birthdaySecondsLeft]);
 
 
+  let url_CV = "";
+  if (i18next.language === "fr") {
+    url_CV = "https://drive.google.com/uc?export=download&id=1rnfrw-ODdYhzGsEYHkYi6vSCrcZMogpK";
+  } else if (i18next.language === "en") {
+    url_CV = "";
+  }
+
   return (
     <div className="App">
       <AppHeader></AppHeader>
@@ -88,10 +95,20 @@ const App = () => {
               <span className="presentation-location"><FontAwesomeIcon className='icon' icon={faLocationDot}></FontAwesomeIcon> Besançon, France</span>
             </div>
 
-            {/* <a id="downloadCV" className='button action' href={"CV_TomPILLET-"+i18next.language+".pdf"} download>
-              {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
-            </a> */}
+            <div className="vertical-delimiter"></div>
           </div>
+        </div>
+
+        <div className="wrapper about-me-wrapper">
+          <div className="wrapper-header">
+            <h3>{t("sections.about_me")}</h3>
+          </div>
+          <div className="wrapper-content">
+            <p className="about-me-content">Je m'appelle Tom. J'ai 22 ans.</p>
+          </div>
+            <a id="downloadCV" className='button action' target="_blank" href={url_CV}>
+              {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
+            </a>
         </div>
 
         {/* <div className="wrapper techno-wrapper">
