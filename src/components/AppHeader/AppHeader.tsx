@@ -4,7 +4,6 @@ import i18next, { changeLanguage } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import iconEN from '../../medias/flags/en-icon.svg';
@@ -20,7 +19,8 @@ const AppHeader: FC<AppHeaderProps> = () => {
       <nav className='navbar'>
         <div className="languages-dropdown">
           <div className="languages-dropdown-trigger">
-            <FontAwesomeIcon className="languages-icon" icon={faGlobe}></FontAwesomeIcon>
+              {i18next.language === 'fr' && <img className="language-flag" src={iconFR} alt="French flag" />}
+              {i18next.language === 'en' && <img className="language-flag" src={iconEN} alt="English flag" />}
           </div>
 
           <div className="languages-list">
