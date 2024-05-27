@@ -99,7 +99,7 @@ const App = () => {
         </div>
 
         <div className="wrapper about-me-wrapper">
-          <div className="wrapper-header">
+          <div className="wrapper-header very-large-background">
             <h3>{t("sections.about_me.title")}</h3>
           </div>
           <div className="wrapper-content">
@@ -123,7 +123,7 @@ const App = () => {
           <div className="wrapper-footer"></div>
         </div> */}
 
-        <div className="wrapper projects-wrapper">
+        <div className="wrapper projects-wrapper very-large-background">
           <h3 className='projects-title'>{ t('my_projects') }</h3>
           <div className="projects-container">
             {
