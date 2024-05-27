@@ -3,7 +3,15 @@
       "my_cv": "Download my CV"
     },
     "sections": {
-      "about_me": "About me",
+      "about_me": {
+        "title": "A propos de moi",
+        "texts": {
+          "text_one": "Hello, welcome on my website ! 👋 As written above, my name is Tom. I am 22 years old, I have a passion for informatic, and especially for <b>game</b> & <b>web/mobile</b> development, with a definite apetite for <b>UI/UX Design</b>.",
+          "text_two": "<b>Curious</b> by nature, it was coding my first game that gave me the taste for programming. Later on, discovering web development, both <b>frontend</b> and <b>backend</b>, has helped me understand how to create applications that are useful to people.",
+          "text_three": "What do I like about it ? Providing a range of solutions to meet everyone's needs, thanks to my <b>creativity</b>, my <b>analytical skills</b> et my ability to <b>put forward ideas</b>, while never being afraid to take on the slightest challenge.",
+          "text_four": "On my spare time, I quench my thirst for boredom by bringing to life the funny ideas that cross my mind. Whether it's web, mobile or game development, or even audiovisual production !"
+        }
+      },
       "technos": "Technologies",
       "projects": "Projects",
       "career": "Career",

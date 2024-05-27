@@ -41,7 +41,7 @@ const AppHeader: FC<AppHeaderProps> = () => {
         <div className="quick-nav">
           <ul className="quick-nav-list">
             <li className="quick-nav-item">
-              <a href="" className="link">{t("sections.about_me")}</a>
+              <a href="" className="link">{t("sections.about_me.title")}</a>
             </li>
             <li className="quick-nav-item">
               <a href="" className="link">{t("sections.technos")}</a>

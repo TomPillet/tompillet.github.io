@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
+import parse from 'html-react-parser';
 
 import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -99,13 +100,13 @@ const App = () => {
 
         <div className="wrapper about-me-wrapper">
           <div className="wrapper-header">
-            <h3>{t("sections.about_me")}</h3>
+            <h3>{t("sections.about_me.title")}</h3>
           </div>
           <div className="wrapper-content">
-            <p className="about-me-content">Salut, bienvenue sur mon site ! 👋 Comme écrit ci-dessus, je m'appelle Tom. J'ai 22 ans, une passion pour l'informatique, et surtout le développement web avec une appétence certaine pour le <b>design UI/UX</b>.</p>
-            <p className="about-me-content"><b>Curieux</b> de nature, c'est en codant mon premier jeu que j'ai pris goût à la programmation. Puis, le <b>frontend</b> et le <b>backend</b> m'ont fait comprendre comment créer des projets web utiles à chacun.</p>
-            <p className="about-me-content">Ce que j'aime dans ce domaine ? Apporter des solutions diverses aux besoins de tous, notamment grâce à ma <b>créativité</b>, mon <b>esprit d'analyse</b> et ma <b>force de proposition</b>.</p>
-            <p className="about-me-content">Sur mon temps libre, j'étanche ma soif d'ennui en donnant vie aux idées farfelues qui me traversent l'esprit. Que ce soit du développement web, jeu vidéo, ou même de la réalisation audiovisuelle !</p>
+            <p className="about-me-content" id="aboutMeOne">{parse(t("sections.about_me.texts.text_one"))}</p>
+            <p className="about-me-content" id="aboutMeTwo">{parse(t("sections.about_me.texts.text_two"))}</p>
+            <p className="about-me-content" id="aboutMeThree">{parse(t("sections.about_me.texts.text_three"))}</p>
+            <p className="about-me-content" id="aboutMeFour">{parse(t("sections.about_me.texts.text_four"))}</p>
           </div>
             <a id="downloadCV" className='button action' target="_blank" href={url_CV}>
               {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
