@@ -10,27 +10,24 @@ body {
   background-color: var(--main-bg-color);
   max-width: 80rem;
   margin: auto;
+  color: var(--main-content-color);
   font-family: 'Ubuntu', sans-serif;
 }
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-
 ol, ul, li {
   list-style: none;
   padding: 0;
 }
-
 a {
   color: var(--main-content-color);
   font-weight: 900;
   text-decoration: none;
   transition: .4s all;
-
-  &:hover {
-    color: var(--orange-brule) !important;
-  }
+}
+a:hover, b {
+  color: var(--orange-brule) !important;
 }
 
 .button {
@@ -97,7 +94,7 @@ a {
 }
 
 .wrapper {
-  margin: 160px 100px;
+  margin: 100px 40px;
   display: block;
 }
 .wrapper-header, .wrapper-footer {
@@ -120,11 +117,10 @@ a {
 .wrapper-content {
   display: flex;
   justify-content: space-between;
-  height: fit-content;  
 }
 
 .presentation-wrapper {
-  margin-top: 0;
+  margin-top: 60px;
 }
 
 .photo-cv-container {
@@ -144,6 +140,7 @@ a {
   height: 40px;
   width: 40px;
   background-color: var(--main-content-color);
+  color: var(--main-bg-color);
   border: 2px solid var(--main-content-color);
   border-radius: 100%;
   position: absolute;
@@ -224,9 +221,22 @@ a {
 }
 .presentation-location {
   display: block;
-  font-size: 1rem;
   letter-spacing: .2rem;
   color: var(--second-content-color);
+}
+
+.about-me-wrapper .wrapper-content {
+  flex-direction: column;
+  padding: 16px 0px;
+}
+.about-me-content {
+  letter-spacing: .1rem;
+  font-weight: 200;
+  margin: 16px 0px;
+
+  &:last-child {
+    margin-bottom: 32px;
+  }
 }
 
 .competences-wrapper {
@@ -242,10 +252,11 @@ a {
 }
 
 .projects-wrapper {
-  height: 800px;
-  margin-bottom: 320px;
-  margin-top: 320px;
-  padding-top: 120px;
+  width: 300%;
+  position: relative;
+  left: -100%;
+  margin: 320px 0px 320px 0px;
+  padding: 160px 0px;
   background-color: white;
   border: 48px solid var(--main-content-color);
   border-left: none;
@@ -256,6 +267,9 @@ a {
 .projects-title {
   color: var(--main-orange-color);
   margin-bottom: 32px;
+  font-size: 2.4em;
+  font-style: italic;
+  font-weight: 900;
   letter-spacing: .2em;
   line-height: .7em;
   text-align: center;

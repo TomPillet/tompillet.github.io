@@ -38,8 +38,6 @@ const AppHeader: FC<AppHeaderProps> = () => {
           </div>
         </div>  
         
-        <div className="whitespace"></div>
-
         <div className="quick-nav">
           <ul className="quick-nav-list">
             <li className="quick-nav-item">

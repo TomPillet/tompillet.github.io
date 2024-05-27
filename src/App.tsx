@@ -94,8 +94,6 @@ const App = () => {
               <p className="presentation-situation">{t("presentation_situation")}</p>
               <span className="presentation-location"><FontAwesomeIcon className='icon' icon={faLocationDot}></FontAwesomeIcon> Besançon, France</span>
             </div>
-
-            <div className="vertical-delimiter"></div>
           </div>
         </div>
 
@@ -104,7 +102,10 @@ const App = () => {
             <h3>{t("sections.about_me")}</h3>
           </div>
           <div className="wrapper-content">
-            <p className="about-me-content">Je m'appelle Tom. J'ai 22 ans.</p>
+            <p className="about-me-content">Salut, bienvenue sur mon site ! 👋 Comme écrit ci-dessus, je m'appelle Tom. J'ai 22 ans, une passion pour l'informatique, et surtout le développement web avec une appétence certaine pour le <b>design UI/UX</b>.</p>
+            <p className="about-me-content"><b>Curieux</b> de nature, c'est en codant mon premier jeu que j'ai pris goût à la programmation. Puis, le <b>frontend</b> et le <b>backend</b> m'ont fait comprendre comment créer des projets web utiles à chacun.</p>
+            <p className="about-me-content">Ce que j'aime dans ce domaine ? Apporter des solutions diverses aux besoins de tous, notamment grâce à ma <b>créativité</b>, mon <b>esprit d'analyse</b> et ma <b>force de proposition</b>.</p>
+            <p className="about-me-content">Sur mon temps libre, j'étanche ma soif d'ennui en donnant vie aux idées farfelues qui me traversent l'esprit. Que ce soit du développement web, jeu vidéo, ou même de la réalisation audiovisuelle !</p>
           </div>
             <a id="downloadCV" className='button action' target="_blank" href={url_CV}>
               {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
@@ -119,7 +120,7 @@ const App = () => {
             <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
           </div>
           <div className="wrapper-footer"></div>
-        </div>
+        </div> */}
 
         <div className="wrapper projects-wrapper">
           <h3 className='projects-title'>{ t('my_projects') }</h3>
@@ -140,7 +141,7 @@ const App = () => {
               })
             }
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
