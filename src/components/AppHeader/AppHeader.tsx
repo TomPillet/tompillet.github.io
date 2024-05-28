@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { FC } from 'react';
 import './AppHeader.scss';
 import i18next, { changeLanguage } from 'i18next';

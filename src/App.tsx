@@ -108,7 +108,7 @@ const App = () => {
             <p className="about-me-content" id="aboutMeThree">{parse(t("sections.about_me.texts.text_three"))}</p>
             <p className="about-me-content" id="aboutMeFour">{parse(t("sections.about_me.texts.text_four"))}</p>
           </div>
-            <a id="downloadCV" className='button action' target="_blank" href={url_CV}>
+            <a id="downloadCV" className='button action' target="_blank" rel="noreferrer" href={url_CV}>
               {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
             </a>
         </div>
