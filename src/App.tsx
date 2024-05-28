@@ -113,7 +113,7 @@ const App = () => {
             </a>
         </div>
 
-        {/* <div className="wrapper techno-wrapper">
+        <div className="wrapper techno-wrapper">
           <div className="wrapper-header">
             <h3>{t("tech_skills")}</h3>
           </div>
@@ -121,7 +121,7 @@ const App = () => {
             <DragSlider id="competences-slider" data={competencesUrls}></DragSlider>
           </div>
           <div className="wrapper-footer"></div>
-        </div> */}
+        </div>
 
         <div className="wrapper projects-wrapper very-large-background">
           <h3 className='projects-title'>{ t('my_projects') }</h3>
