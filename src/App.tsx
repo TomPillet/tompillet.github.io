@@ -67,9 +67,9 @@ const App = () => {
 
   let url_CV = "";
   if (i18next.language === "fr") {
-    url_CV = "https://drive.google.com/uc?export=download&id=1rnfrw-ODdYhzGsEYHkYi6vSCrcZMogpK";
+    url_CV = "https://drive.google.com/uc?export=download&id=1JVp8-ftSB2QubavyhFhACymbDsMt5emU";
   } else if (i18next.language === "en") {
-    url_CV = "";
+    url_CV = "https://drive.google.com/uc?export=download&id=17ktcre2SjByuJm9i66KWkZ2Muu1KiKBF";
   }
 
   return (
