@@ -76,7 +76,7 @@ const App = () => {
   return (
     <div className="App">
       <AppHeader></AppHeader>
-      {!window.location.href.includes("tompillet.com") && <RedirectionModal></RedirectionModal>}
+      {window.location.href.includes("tompillet.com") && <RedirectionModal></RedirectionModal>}
       
       <div className='content'>
         <div className="wrapper presentation-wrapper">
