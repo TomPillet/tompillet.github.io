@@ -6,9 +6,9 @@
     width: 480px;
     padding: 24px;
     background-color: white;
-    box-shadow: 0px 0px 12px var(--main-bg-color);
+    box-shadow: 0px 0px 12px var(--main-black-color);
     border-radius: 8px;
-    color: var(--main-bg-color);
+    color: var(--main-black-color);
 
     position: absolute;
     top: 0;
@@ -31,8 +31,8 @@
     padding: 8px 12px;
     border: none;
     border-radius: 4px;
-    background-color: var(--white-btn-bg-color);
-    color: var(--main-bg-color);
+    background-color: var(--second-white-color);
+    color: var(--main-black-color);
     font-size: .9em;
     font-weight: bold;
     transition: all .3s;
@@ -44,6 +44,6 @@
 
     &.redirection-link {
         background-color: var(--bleu-fonce);
-        color: var(--main-content-color) !important;
+        color: var(--main-white-color) !important;
     }
 }

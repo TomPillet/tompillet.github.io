@@ -11,7 +11,7 @@
     display: block;
     height: 520px; width: 320px;
     margin: 32px; 
-    color: var(--main-content-color);
+    color: var(--main-white-color);
 
     position: relative;
     animation: 2s ease-in-out 0s infinite verticalFloatingAnimation;
@@ -40,7 +40,7 @@
 .card-content {
     display: block;
     height: 100%; width: 100%;
-    background-color: var(--second-bg-color);
+    background-color: var(--second-black-color);
     border-radius: 8px;
 }
 
