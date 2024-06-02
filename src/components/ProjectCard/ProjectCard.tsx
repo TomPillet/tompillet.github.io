@@ -3,7 +3,7 @@ import Color from 'color-thief-react';
 import { useTranslation } from 'react-i18next';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/fontawesome-free-brands';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 

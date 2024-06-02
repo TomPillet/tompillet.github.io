@@ -2,9 +2,37 @@
     "download": {
       "my_cv": "Télécharger mon CV"
     },
-    "hi_im": "Salut, moi c'est",
     "my_projects": "Mes projets personnels",
-    "presentation": "Développeur junior, ambitieux et motivé",
+    "next_birthday_in": "Prochain anniversaire dans",
+    "presentation_situation": "En recherche d'alternance",
+    "presentation_text": "Développeur web fullstack",
+    "redirect_to_dev": {
+      "message": "Le site est en cours de refonte. Souhaitez-vous rester sur la version actuelle, ou explorer celle en plein développement ?",
+      "explore": "J'explore",
+      "stay": "Je reste"
+    }, 
+    "sections": {
+      "about_me": {
+        "title": "A propos de moi",
+        "texts": {
+          "text_one": "Salut, bienvenue sur mon site ! 👋 Comme écrit ci-dessus, je m'appelle Tom. J'ai 22 ans, une passion pour l'informatique, surtout pour le développement <b>jeux vidéo</b> et <b>web/mobile</b>, avec une appétence certaine pour le <b>design UI/UX</b>.",
+          "text_two": "<b>Curieux</b> de nature, c'est en codant mon premier jeu que j'ai pris goût à la programmation. Plus tard, découvrir le développement web, tant le <b>frontend</b> que le <b>backend</b>, m'a aidé à comprendre comment créer des applications utiles à chacun.",
+          "text_three": "Ce que j'aime dans ce domaine ? Apporter des solutions diverses aux besoins de tous, notamment grâce à ma <b>créativité</b>, mon <b>esprit d'analyse</b> et ma <b>force de proposition</b>, tout en n'ayant jamais peur de relever le moindre défi.",
+          "text_four": "Sur mon temps libre, j'étanche ma soif d'ennui en donnant vie aux idées amusantes qui me traversent l'esprit. Que ce soit du développement web/mobile, jeu vidéo, ou même de la réalisation audiovisuelle !"
+        }
+      },
+      "technos": "Technologies",
+      "projects": "Projets",
+      "career": "Carrière",
+      "contact": "Contact"
+    },
     "see_repo": "Voir le repo",
+    "single_words": {
+      "and": "et",
+      "days": "jours",
+      "hours": "heures",
+      "minutes": "minutes",
+      "seconds": "secondes"
+    },
     "tech_skills": "Compétences techniques"
-}
+  }

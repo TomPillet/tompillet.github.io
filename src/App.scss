@@ -1,78 +1,65 @@
 @import url(vars.css);
 
 @keyframes slideIn {
-  from { margin-left: -100%; }
-  to { margin-left: 0%; }
+  from { left: -100%;  }
+  to { left: 0%; }
 }
 
 body {
   overflow-x: hidden;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-black-color);
+  max-width: 80rem;
+  margin: auto;
+  color: var(--main-white-color);
+  font-family: 'Ubuntu', sans-serif;
 }
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-h1 { font-size: 2.8em; }
-h2 { font-size: 2.4em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.7em; }
-h5 { font-size: 1.4em; }
-h6 { font-size: 1.1em; }
-
 ol, ul, li {
   list-style: none;
+  padding: 0;
 }
-
 a {
+  color: var(--main-white-color);
+  font-weight: 900;
   text-decoration: none;
-
-  &.link:hover {
-    border-bottom: var(--main-content-color) 1px solid;
-  }
+  transition: .4s all;
 }
-
-p {
-  color: var(--main-content-color);
+a:hover, b {
+  color: var(--orange-brule) !important;
 }
 
 .button {
   padding: 12px 24px;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-black-color);
   border: solid 1px var(--main-border-color);
   border-radius: 4px;
-  color: var(--third-content-color);
+  color: var(--main-white-color);
   width: fit-content;
 
   &.action {
     display: block;
     margin: auto;
-    background-color: var(--second-bg-color);
+    background-color: var(--second-black-color);
     transition: all .3s;
 
     &:hover {
       cursor: pointer;
-      color: var(--main-content-color);
-      transition: all .3s;
+      scale: 108%;
     }
-
+    
     & svg {
       margin-left: 4px;
     }
   }
 }
 
-.content {
-  animation-duration: 1s;
-  animation-name: slideIn;
-  margin-top: 24px;
-}
-
 .dynamic-underline:after {
   content: '';
   position: relative;
   display: block;
-  height: 1px;
+  height: 2px;
   width: 0px;
   background-color: var(--main-orange-color);
   transition: all .4s;
@@ -81,97 +68,181 @@ p {
 .no-display {
   display: none !important;
 }
+.highlight:after {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  left: -2px;
+  bottom: 4px;
+  z-index: -1;
+  transform: rotate(-1.2deg) translateY(25%);
+  background-color: var(--orange-brule);
+  opacity: .8;
+}
 
-.photo-container {
-  height: 180px;
-  width: 180px;
-  margin: auto;
-  padding: 40px 0px;
+.vertical-delimiter {
+  width: 4px;
+  height: 100%;
+  background-color: white;
+}
 
-  & #photoHeadings {
-    display: block;
-    margin-top: 8px;
+.content {
+  position: relative;
+  animation-duration: .8s;
+  animation-name: slideIn;
+}
+
+.wrapper {
+  margin: 100px 40px;
+  display: block;
+}
+.wrapper-header, .wrapper-footer {
+  padding: 24px 0px;
+  background-color: var(--second-black-color);
+
+  & h3 {
+    width: fit-content;
+    margin: auto;
+    color: var(--main-white-color);
+    font-size: 1.6em;
+    letter-spacing: .4em;
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+  }
+}
+.wrapper-content {
+  display: flex;
+  justify-content: space-between;
+}
+.very-large-background {
+  width: 500%;
+  position: relative;
+  left: -200%;
+}
+
+.presentation-wrapper {
+  margin-top: 60px;
+}
+
+.photo-cv-container {
+  height: 240px;
+  width: 240px;;
+  position: relative;
+  display: block;
+
+  &:has(.birthday-trigger:hover) .birthday-text {
+    opacity: .96;
+  }
+}
+.birthday-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-white-color);
+  color: var(--main-black-color);
+  border: 2px solid var(--main-white-color);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 220px;
+  z-index: 1000;
+  transition: all .3s;
+
+  &:hover {
+    background-color: var(--second-black-color);
+    color: var(--main-white-color);
+    border: 2px solid var(--third-white-color);
+  }
+}
+.birthday-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 2px;
+  position: absolute;
+  opacity: 0;
+  border-radius: 100%;
+  background-color: var(--second-black-color);
+  transition: all .3s;
+
+  & p {
+    width: 72%;
     text-align: center;
-    font-weight: 400;
-    transition: all 1s;
-
-    & span {
-      display: inline-block;
-      font-weight: bold;
-      transition: all .4s;
-    }
+    font-weight: 200;
+    margin: auto;
+    color: var(--main-white-color)
   }
 }
 #photoCV {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: left top;
-  // border: 4px solid white;
+  object-position: 20% 20%;
+  border: 2px solid var(--third-white-color);
   border-radius: 100%;
-  box-sizing: border-box;
+  box-sizing: content-box;
   box-shadow: black 0px 0px 4px;
-  filter: grayscale(90%) contrast(100%);
-  transform: scale(90%);
-  transition: all .8s;
-
-  &:hover {
-    transform: scale(100%);
-    filter: grayscale(10%);
-    transition: all .8s;
-  }
-
-  &:hover + #photoHeadings .dynamic-underline:after {
-    width: 36px;
-    transition: all .4s;
-  }
 }
 
-.wrapper {
-  margin: 160px 0px;
-  display: block;
-
-  & .wrapper-header, & .wrapper-footer {
-    padding: 24px 0px;
-    background-color: var(--second-bg-color);
-
-    & h3 {
-      width: fit-content;
-      margin: auto;
-      color: var(--main-content-color);
-      font-size: 1.6em;
-      letter-spacing: .4em;
-      transform: skewX(-10deg);
-      text-transform: uppercase;
-    }
-  }
-}
-
-.presentation-wrapper {
-  margin: auto;
-  padding-top: 40px;
-  width: 80vw;
-}
-
-.presentation-keywords {
+.presentation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  width: 72%;
   position: relative;
-  font-weight: bold;
-  font-size: 2.8em;
-  margin: auto;
-  padding: 8px 0px 24px 0px;
-  max-width: 520px;
-  text-align: center;
-  color: var(--second-content-color);
+  padding: 8px 0px;
+  letter-spacing: .4rem;
+}
+.presentation-title {
+  font-family: 'Merienda', sans-serif;
+  font-weight: 900;
+  font-size: 5.6rem;
+  line-height: 6rem;
+  color: var(--main-white-color);
+}
+.presentation-text, .presentation-situation {
+  margin: 0;
+  color: var(--main-white-color);
+}
+.presentation-text {
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  position: relative;
+}
+.presentation-situation {
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: .2rem;
+  color: var(--third-white-color);
+}
+.presentation-location {
+  display: block;
+  letter-spacing: .2rem;
+  color: var(--third-white-color);
+}
 
-  &:after {
-    content: "";
-    position: absolute; top: 0; bottom: 0; left: 0px; right: 0px;
-    // box-shadow: inset -64px 0px 80px var(--main-bg-color);
+.about-me-wrapper .wrapper-content {
+  flex-direction: column;
+  padding: 16px 0px;
+}
+.about-me-content {
+  letter-spacing: .1rem;
+  font-weight: 200;
+  margin: 16px 0px;
+
+  &:last-child {
+    margin-bottom: 32px;
   }
 }
 
 .competences-wrapper {
-  background-color: var(--third-bg-color);
+  background-color: var(--third-black-color);
   height: 240px;
   padding: 64px 0px;
   cursor: grab;
@@ -183,20 +254,21 @@ p {
 }
 
 .projects-wrapper {
-  height: 800px;
-  margin-bottom: 320px;
-  margin-top: 320px;
-  padding-top: 120px;
+  margin: 320px 0px 320px 0px;
+  padding: 160px 0px;
   background-color: white;
-  border: 48px solid var(--main-content-color);
+  border: 48px solid var(--main-white-color);
   border-left: none;
   border-right: none;
-  box-shadow: 0px 0px 0px 24px var(--second-bg-color);
+  box-shadow: 0px 0px 0px 24px var(--second-black-color);
   transform: skewY(-10deg);
 }
 .projects-title {
   color: var(--main-orange-color);
   margin-bottom: 32px;
+  font-size: 2.4em;
+  font-style: italic;
+  font-weight: 900;
   letter-spacing: .2em;
   line-height: .7em;
   text-align: center;

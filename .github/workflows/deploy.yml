@@ -11,7 +11,7 @@ permissions:
 jobs:
   deploy:
     environment:
-      name: github-pages
+      name: Production
       url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:

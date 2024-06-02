@@ -2,9 +2,37 @@
     "download": {
       "my_cv": "Download my CV"
     },
-    "hi_im": "Hi, my name is",
     "my_projects": "My personal projects",
-    "presentation": "Junior developer, ambitious and motivated",
+    "next_birthday_in": "Next birthday in",
+    "presentation_situation": "Applying as an apprentice",
+    "presentation_text": "Fullstack web developer",
+    "redirect_to_dev": {
+      "message": "The site is on development. Would you like to stay on the current version, or explore the one on development ?",
+      "explore": "I explore",
+      "stay": "I stay"
+    }, 
     "see_repo": "See the repo",
+    "sections": {
+      "about_me": {
+        "title": "About me",
+        "texts": {
+          "text_one": "Hello, welcome on my website ! 👋 As written above, my name is Tom. I am 22 years old, I have a passion for informatic, and especially for <b>game</b> & <b>web/mobile</b> development, with a definite apetite for <b>UI/UX Design</b>.",
+          "text_two": "<b>Curious</b> by nature, it was coding my first game that gave me the taste for programming. Later on, discovering web development, both <b>frontend</b> and <b>backend</b>, has helped me understand how to create applications that are useful to people.",
+          "text_three": "What do I like about it ? Providing a range of solutions to meet everyone's needs, thanks to my <b>creativity</b>, my <b>analytical skills</b> and my ability to <b>put forward ideas</b>, while never being afraid to take on the slightest challenge.",
+          "text_four": "On my spare time, I quench my thirst for boredom by bringing to life the funny ideas that cross my mind. Whether it's web, mobile or game development, or even audiovisual production !"
+        }
+      },
+      "technos": "Technologies",
+      "projects": "Projects",
+      "career": "Career",
+      "contact": "Contact"
+    },
+    "single_words": {
+      "and": "and",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    },
     "tech_skills": "Technical skills"
   }
