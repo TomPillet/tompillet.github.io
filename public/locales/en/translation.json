@@ -2,6 +2,16 @@
     "download": {
       "my_cv": "Download my CV"
     },
+    "my_projects": "My personal projects",
+    "next_birthday_in": "Next birthday in",
+    "presentation_situation": "Applying as an apprentice",
+    "presentation_text": "Fullstack web developer",
+    "redirect_to_dev": {
+      "message": "The site is on development. Would you like to stay on the current version, or explore the one on development ?",
+      "explore": "I explore",
+      "stay": "I stay"
+    }, 
+    "see_repo": "See the repo",
     "sections": {
       "about_me": {
         "title": "About me",
@@ -17,17 +27,12 @@
       "career": "Career",
       "contact": "Contact"
     },
-    "my_projects": "My personal projects",
-    "presentation_text": "Fullstack web developer",
-    "presentation_situation": "Applying as an apprentice",
-    "see_repo": "See the repo",
-    "tech_skills": "Technical skills",
-    "next_birthday_in": "Next birthday in",
-    "words": {
+    "single_words": {
       "and": "and",
       "days": "days",
       "hours": "hours",
       "minutes": "minutes",
       "seconds": "seconds"
-    }
+    },
+    "tech_skills": "Technical skills"
   }

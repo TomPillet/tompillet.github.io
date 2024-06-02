@@ -14,6 +14,7 @@ import ProjectCard from './components/ProjectCard/ProjectCard';
 import photoCV from './medias/photocv_profil.jpg';
 
 import competencesUrls from './json/competences-urls.json';
+import RedirectionModal from './components/RedirectionModal/RedirectionModal';
 
 const App = () => {
   let { t }= useTranslation();
@@ -75,6 +76,7 @@ const App = () => {
   return (
     <div className="App">
       <AppHeader></AppHeader>
+      <RedirectionModal></RedirectionModal>
 
       <div className='content'>
         <div className="wrapper presentation-wrapper">
@@ -84,7 +86,7 @@ const App = () => {
                 <span><FontAwesomeIcon className='icon' icon={faCakeCandles}/></span>
               </div>
               <div className='birthday-text'>
-                <p>{t("next_birthday_in")} <b>{birthdayDaysLeft}</b> {t("words.days")}, <b>{birthdayHoursLeft}</b> {t("words.hours")}, <b>{birthdayMinutesLeft}</b> {t("words.minutes")} {t("words.and")} <b>{birthdaySecondsLeft}</b> {t("words.seconds")}.</p>
+                <p>{t("next_birthday_in")} <b>{birthdayDaysLeft}</b> {t("single_words.days")}, <b>{birthdayHoursLeft}</b> {t("single_words.hours")}, <b>{birthdayMinutesLeft}</b> {t("single_words.minutes")} {t("single_words.and")} <b>{birthdaySecondsLeft}</b> {t("single_words.seconds")}.</p>
               </div>
               <img id="photoCV" src={photoCV} alt="Tom PILLET"/>
             </div>
