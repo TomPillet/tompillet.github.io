@@ -10,11 +10,11 @@ import { faDownload, faCakeCandles, faLocationDot } from '@fortawesome/free-soli
 import AppHeader from './components/AppHeader/AppHeader';
 import DragSlider from './components/DragSlider/DragSlider';
 import ProjectCard from './components/ProjectCard/ProjectCard';
+import RedirectionModal from './components/RedirectionModal/RedirectionModal';
 
 import photoCV from './medias/photocv_profil.jpg';
 
 import competencesUrls from './json/competences-urls.json';
-import RedirectionModal from './components/RedirectionModal/RedirectionModal';
 
 const App = () => {
   let { t }= useTranslation();
