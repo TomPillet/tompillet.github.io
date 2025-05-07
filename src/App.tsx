@@ -17,53 +17,36 @@ import photoCV from './medias/photocv_profil.jpg';
 import competencesUrls from './json/competences-urls.json';
 
 const App = () => {
-  let { t }= useTranslation();
-  let projectsList = require("./json/projects/"+i18next.language.substring(0,2)+"/projects.json");
+  let { t } = useTranslation();
+  let projectsList = require("./json/projects/" + i18next.language.substring(0, 2) + "/projects.json");
   let projectsResources = require("./json/projects/projects-resources.json");
 
-  const year = new Date().getFullYear();
-  const birthday = new Date(year, 10, 13).getTime();
-  const today = Date.now();
-  let remainingTime = (birthday - today);
+  const calculateTimeRemaining = () => {
+    const year = new Date().getFullYear();
+    const birthday = new Date(year, 10, 13).getTime();
+    const now = Date.now();
 
-  // const [birthdayMonthsLeft, setBirthdayMonthsLeft] = useState(0);
+    // Si l'anniversaire est déjà passé cette année, prendre l'année suivante
+    const targetDate = birthday > now ? birthday : new Date(year + 1, 10, 13).getTime();
+    const remainingTime = targetDate - now;
 
-  let [birthdayDaysLeft, setBirthdayDaysLeft] = useState(Math.floor(remainingTime/1000/60/60/24));
-  remainingTime = remainingTime-(birthdayDaysLeft*86400*1000);
-  let [birthdayHoursLeft, setBirthdayHoursLeft] = useState(Math.floor(remainingTime/1000/60/60));
-  remainingTime = remainingTime-(birthdayHoursLeft*3600*1000);
-  let [birthdayMinutesLeft, setBirthdayMinutesLeft] = useState(Math.floor(remainingTime/1000/60));
-  remainingTime = remainingTime-(birthdayMinutesLeft*60*1000);
-  let [birthdaySecondsLeft, setBirthdaySecondsLeft] = useState(Math.floor(remainingTime/1000));
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining);
 
   useEffect(() => {
-    let interval = setInterval(() => {
-      if (birthdaySecondsLeft > 0) {
-        setBirthdaySecondsLeft(birthdaySecondsLeft - 1);
-      } else if (birthdayMinutesLeft > 0) {
-        setBirthdayMinutesLeft(birthdayMinutesLeft - 1);
-        setBirthdaySecondsLeft(59);
-      } else if (birthdayHoursLeft > 0) {
-        setBirthdayHoursLeft(birthdayHoursLeft - 1);
-        setBirthdayMinutesLeft(59);
-        setBirthdaySecondsLeft(59);
-      } else if (birthdayDaysLeft > 0) {
-        setBirthdayDaysLeft(birthdayDaysLeft - 1);
-        setBirthdayHoursLeft(23);
-        setBirthdayMinutesLeft(59);
-        setBirthdaySecondsLeft(59);
-      } 
-      // else if (birthdayMonthsLeft > 0) {
-      //   setBirthdayMonthsLeft((birthdayMonthsLeft) => birthdayMonthsLeft--);
-      //   setBirthdayDaysLeft(30);
-      //   setBirthdayHoursLeft(23);
-      //   setBirthdayMinutesLeft(59);
-      //   setBirthdaySecondsLeft(59);
-      // }
+    const interval = setInterval(() => {
+      setTimeRemaining(calculateTimeRemaining());
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [birthdayDaysLeft, birthdayHoursLeft, birthdayMinutesLeft, birthdaySecondsLeft]);
+  }, []);
 
 
   let url_CV = "";
@@ -77,18 +60,18 @@ const App = () => {
     <div className="App">
       <AppHeader></AppHeader>
       {window.location.href.includes("tompillet.com") && <RedirectionModal></RedirectionModal>}
-      
+
       <div className='content'>
         <div className="wrapper presentation-wrapper">
           <div className='wrapper-content'>
             <div className='photo-cv-container'>
               <div className="birthday-trigger">
-                <span><FontAwesomeIcon className='icon' icon={faCakeCandles}/></span>
+                <span><FontAwesomeIcon className='icon' icon={faCakeCandles} /></span>
               </div>
               <div className='birthday-text'>
-                <p>{t("next_birthday_in")} <b>{birthdayDaysLeft}</b> {t("single_words.days")}, <b>{birthdayHoursLeft}</b> {t("single_words.hours")}, <b>{birthdayMinutesLeft}</b> {t("single_words.minutes")} {t("single_words.and")} <b>{birthdaySecondsLeft}</b> {t("single_words.seconds")}.</p>
+                <p>{t("next_birthday_in")} <b>{timeRemaining.days}</b> {t("single_words.days")}, <b>{timeRemaining.hours}</b> {t("single_words.hours")}, <b>{timeRemaining.minutes}</b> {t("single_words.minutes")} {t("single_words.and")} <b>{timeRemaining.seconds}</b> {t("single_words.seconds")}.</p>
               </div>
-              <img id="photoCV" src={photoCV} alt="Tom PILLET"/>
+              <img id="photoCV" src={photoCV} alt="Tom PILLET" />
             </div>
 
             <div className='presentation-container'>
@@ -110,9 +93,9 @@ const App = () => {
             <p className="about-me-content" id="aboutMeThree">{parse(t("sections.about_me.texts.text_three"))}</p>
             <p className="about-me-content" id="aboutMeFour">{parse(t("sections.about_me.texts.text_four"))}</p>
           </div>
-            <a id="downloadCV" className='button action' target="_blank" rel="noreferrer" href={url_CV}>
-              {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload}/>
-            </a>
+          <a id="downloadCV" className='button action' target="_blank" rel="noreferrer" href={url_CV}>
+            {t("download.my_cv")} <FontAwesomeIcon className='icon' icon={faDownload} />
+          </a>
         </div>
 
         {/* <div className="wrapper techno-wrapper">
@@ -126,7 +109,7 @@ const App = () => {
         </div> */}
 
         <div className="wrapper projects-wrapper very-large-background">
-          <h3 className='projects-title'>{ t('my_projects') }</h3>
+          <h3 className='projects-title'>{t('my_projects')}</h3>
           <div className="projects-container">
             {
               projectsList.map((project: any) => {
@@ -137,7 +120,7 @@ const App = () => {
                     projectBackgroundImage={resources.background}
                     projectDescription={project.description}
                     projectTitle={project.title}
-                    projectTitleCustomColor={(resources.title_custom_color)? resources.title_custom_color : null}
+                    projectTitleCustomColor={(resources.title_custom_color) ? resources.title_custom_color : null}
                     projectLinks={resources.links}
                   />
                 )
